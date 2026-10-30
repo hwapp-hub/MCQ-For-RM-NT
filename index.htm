@@ -34,8 +34,7 @@ header h1{font-family:'Montserrat',sans-serif;font-size:clamp(1.15rem,4vw,1.75re
 .theme-btn,.mode-toggle-btn{border:0;padding:7px 12px;border-radius:20px;cursor:pointer;background:var(--accent);color:var(--primary-dark);font-weight:800}
 .theme-btn{font-size:1.05rem;background:var(--primary);color:#fff}
 .theme-btn.active,.theme-btn:hover{background:var(--accent);color:var(--primary-dark);transform:scale(1.06)}
-.toolbar-export{display:flex;justify-content:center;border-top:1px solid var(--border-color);margin-top:12px;padding-top:12px}
-.pdf-export-btn,.btn{border:0;border-radius:10px;padding:10px 16px;cursor:pointer;font-weight:800;font-size:.95rem;background:var(--primary);color:#fff}
+.btn{border:0;border-radius:10px;padding:10px 16px;cursor:pointer;font-weight:800;font-size:.95rem;background:var(--primary);color:#fff}
 .btn.secondary{background:var(--accent);color:var(--primary-dark)}
 .btn:disabled{opacity:.45;cursor:not-allowed}
 .modules-nav{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;margin-bottom:16px}
@@ -107,7 +106,6 @@ footer a{color:var(--accent);text-decoration:none;font-weight:800;font-size:1.05
     <button class="theme-btn" onclick="setTheme('ice')" title="جليدي">🧊</button>
     <button class="mode-toggle-btn" id="modeBtn" onclick="toggleMode()">☀️ فاتح</button>
   </div>
-  <div class="toolbar-export"><button class="pdf-export-btn" onclick="window.print()">📄 Export / تصدير PDF</button></div>
 </div>
 <div id="quizView" hidden></div>
 <div id="libraryView">
