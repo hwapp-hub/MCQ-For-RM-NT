@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCQ For Mediterm RM And NT Module</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#58111A;--primary-dark:#3B0B11;--primary-light:#7A1C28;--accent:#E5A93C;--accent-hover:#C98E2A;--accent-light:#FFF8E7;--bg-color:#FBF8F5;--card-bg:#FFF;--text-dark:#2A1810;--text-muted:#6B5B52;--completed-green:#2E7D32;--pending-red:#C62828;--border-radius:14px;--border-color:#EFE4DC;--btn-btn1-bg:#7A1C28;--btn-btn2-bg:#E5A93C;--btn-btn2-color:#2A1810}
+[data-theme=sky]{--primary:#1E3A8A;--primary-dark:#172554;--primary-light:#2563EB;--accent:#38BDF8;--accent-hover:#0284C7;--accent-light:#F0F9FF;--bg-color:#F8FAFC;--card-bg:#FFF;--text-dark:#0F172A;--text-muted:#475569;--completed-green:#15803D;--pending-red:#B91C1C;--border-color:#E2E8F0;--btn-btn1-bg:#1E3A8A;--btn-btn2-bg:#38BDF8;--btn-btn2-color:#0F172A}
+[data-theme=rose]{--primary:#9F1239;--primary-dark:#4C0519;--primary-light:#E11D48;--accent:#FB7185;--accent-hover:#F43F5E;--accent-light:#FFF1F2;--bg-color:#FFF5F7;--card-bg:#FFF;--text-dark:#27272A;--text-muted:#52525B;--completed-green:#047857;--pending-red:#BE123C;--border-color:#FFE4E6;--btn-btn1-bg:#9F1239;--btn-btn2-bg:#FB7185;--btn-btn2-color:#FFF}
+[data-theme=brown]{--primary:#4A2E2B;--primary-dark:#2D1B19;--primary-light:#6F423D;--accent:#A67B5B;--accent-hover:#8C5A3C;--accent-light:#FDFBF7;--bg-color:#F7F3EF;--card-bg:#FFF;--text-dark:#1F1412;--text-muted:#594440;--completed-green:#2D6A4F;--pending-red:#9A031E;--border-color:#E8DFD8;--btn-btn1-bg:#4A2E2B;--btn-btn2-bg:#A67B5B;--btn-btn2-color:#FFF}
+[data-theme=green]{--primary:#14532D;--primary-dark:#052E16;--primary-light:#166534;--accent:#4ADE80;--accent-hover:#22C55E;--accent-light:#F0FDF4;--bg-color:#F4FBF7;--card-bg:#FFF;--text-dark:#052E16;--text-muted:#3F6212;--completed-green:#15803D;--pending-red:#991B1B;--border-color:#DCFCE7;--btn-btn1-bg:#14532D;--btn-btn2-bg:#4ADE80;--btn-btn2-color:#052E16}
+[data-theme=purple]{--primary:#6D28D9;--primary-dark:#3B0764;--primary-light:#8B5CF6;--accent:#C4B5FD;--accent-hover:#A78BFA;--accent-light:#F5F3FF;--bg-color:#FAF8FF;--card-bg:#FFF;--text-dark:#2E1065;--text-muted:#6B5B83;--completed-green:#15803D;--pending-red:#BE123C;--border-color:#E9D5FF;--btn-btn1-bg:#6D28D9;--btn-btn2-bg:#C4B5FD;--btn-btn2-color:#2E1065}
+[data-theme=teal]{--primary:#0F766E;--primary-dark:#134E4A;--primary-light:#14B8A6;--accent:#5EEAD4;--accent-hover:#2DD4BF;--accent-light:#F0FDFA;--bg-color:#F3FCFA;--card-bg:#FFF;--text-dark:#134E4A;--text-muted:#4B6B67;--completed-green:#15803D;--pending-red:#B91C1C;--border-color:#CCFBF1;--btn-btn1-bg:#0F766E;--btn-btn2-bg:#5EEAD4;--btn-btn2-color:#134E4A}
+[data-theme=orange]{--primary:#C2410C;--primary-dark:#7C2D12;--primary-light:#EA580C;--accent:#FDBA74;--accent-hover:#FB923C;--accent-light:#FFF7ED;--bg-color:#FFFAF5;--card-bg:#FFF;--text-dark:#431407;--text-muted:#7C5A4A;--completed-green:#15803D;--pending-red:#B91C1C;--border-color:#FED7AA;--btn-btn1-bg:#C2410C;--btn-btn2-bg:#FDBA74;--btn-btn2-color:#431407}
+[data-theme=midnight]{--primary:#334155;--primary-dark:#0F172A;--primary-light:#475569;--accent:#FBBF24;--accent-hover:#F59E0B;--accent-light:#F8FAFC;--bg-color:#F1F5F9;--card-bg:#FFF;--text-dark:#0F172A;--text-muted:#475569;--completed-green:#15803D;--pending-red:#B91C1C;--border-color:#CBD5E1;--btn-btn1-bg:#334155;--btn-btn2-bg:#FBBF24;--btn-btn2-color:#0F172A}
+[data-theme=lavender]{--primary:#7C3AED;--primary-dark:#4C1D95;--primary-light:#A78BFA;--accent:#F0ABFC;--accent-hover:#E879F9;--accent-light:#FDF4FF;--bg-color:#FFFAFF;--card-bg:#FFF;--text-dark:#3B0764;--text-muted:#7E638C;--completed-green:#15803D;--pending-red:#BE123C;--border-color:#F5D0FE;--btn-btn1-bg:#7C3AED;--btn-btn2-bg:#F0ABFC;--btn-btn2-color:#3B0764}
+[data-theme=ocean]{--primary:#0369A1;--primary-dark:#082F49;--primary-light:#0284C7;--accent:#67E8F9;--accent-hover:#22D3EE;--accent-light:#ECFEFF;--bg-color:#F0FAFF;--card-bg:#FFF;--text-dark:#082F49;--text-muted:#476779;--completed-green:#15803D;--pending-red:#B91C1C;--border-color:#BAE6FD;--btn-btn1-bg:#0369A1;--btn-btn2-bg:#67E8F9;--btn-btn2-color:#082F49}
+[data-theme=olive]{--primary:#4D7C0F;--primary-dark:#283618;--primary-light:#65A30D;--accent:#D9ED92;--accent-hover:#B5CC65;--accent-light:#F7FCE8;--bg-color:#FAFDF2;--card-bg:#FFF;--text-dark:#283618;--text-muted:#66734D;--completed-green:#3F6212;--pending-red:#B91C1C;--border-color:#E2EAC0;--btn-btn1-bg:#4D7C0F;--btn-btn2-bg:#D9ED92;--btn-btn2-color:#283618}
+[data-theme=slate]{--primary:#475569;--primary-dark:#1E293B;--primary-light:#64748B;--accent:#CBD5E1;--accent-hover:#94A3B8;--accent-light:#F8FAFC;--bg-color:#F8FAFC;--card-bg:#FFF;--text-dark:#1E293B;--text-muted:#64748B;--completed-green:#15803D;--pending-red:#B91C1C;--border-color:#E2E8F0;--btn-btn1-bg:#475569;--btn-btn2-bg:#CBD5E1;--btn-btn2-color:#1E293B}
+[data-theme=mint]{--primary:#047857;--primary-dark:#064E3B;--primary-light:#10B981;--accent:#A7F3D0;--accent-hover:#6EE7B7;--accent-light:#ECFDF5;--bg-color:#F3FCF7;--card-bg:#FFF;--text-dark:#064E3B;--text-muted:#4B7061;--completed-green:#15803D;--pending-red:#B91C1C;--border-color:#D1FAE5;--btn-btn1-bg:#047857;--btn-btn2-bg:#A7F3D0;--btn-btn2-color:#064E3B}
+[data-theme=cherry]{--primary:#BE123C;--primary-dark:#881337;--primary-light:#E11D48;--accent:#FDA4AF;--accent-hover:#FB7185;--accent-light:#FFF1F2;--bg-color:#FFF7F8;--card-bg:#FFF;--text-dark:#4C0519;--text-muted:#8A5363;--completed-green:#15803D;--pending-red:#9F1239;--border-color:#FFE4E6;--btn-btn1-bg:#BE123C;--btn-btn2-bg:#FDA4AF;--btn-btn2-color:#4C0519}
+[data-theme=sand]{--primary:#92400E;--primary-dark:#78350F;--primary-light:#B45309;--accent:#FCD34D;--accent-hover:#FBBF24;--accent-light:#FFFBEB;--bg-color:#FFFCF3;--card-bg:#FFF;--text-dark:#451A03;--text-muted:#78624D;--completed-green:#15803D;--pending-red:#B91C1C;--border-color:#FDE68A;--btn-btn1-bg:#92400E;--btn-btn2-bg:#FCD34D;--btn-btn2-color:#451A03}
+[data-theme=ice]{--primary:#0E7490;--primary-dark:#164E63;--primary-light:#0891B2;--accent:#A5F3FC;--accent-hover:#67E8F9;--accent-light:#ECFEFF;--bg-color:#F4FCFF;--card-bg:#FFF;--text-dark:#164E63;--text-muted:#527783;--completed-green:#15803D;--pending-red:#B91C1C;--border-color:#CFFAFE;--btn-btn1-bg:#0E7490;--btn-btn2-bg:#A5F3FC;--btn-btn2-color:#164E63}
+[data-mode=dark]{--bg-color:#000!important;--card-bg:#121212!important;--text-dark:#F5F5F5!important;--text-muted:#A0A0A0!important;--border-color:#262626!important;--accent-light:rgba(255,255,255,.06)!important;--primary-dark:#050505!important}
+*{box-sizing:border-box;font-family:'Tajawal',sans-serif;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg-color);color:var(--text-dark);padding:20px 12px 60px;direction:rtl;min-height:100vh;transition:background-color .3s,color .3s}
+.container{max-width:900px;margin:0 auto;width:100%}
+header{text-align:center;margin-bottom:12px;padding:22px 18px;background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--border-radius);box-shadow:0 8px 20px #0006;color:#fff;border-bottom:4px solid var(--accent)}
+header h1{font-family:'Montserrat',sans-serif;font-size:clamp(1.15rem,4vw,1.75rem);font-weight:600;line-height:1.35;color:var(--accent);overflow-wrap:anywhere}
+.toolbar-card,.card,.quiz-card{background:var(--card-bg);border:1px solid var(--border-color);border-radius:var(--border-radius);padding:16px;margin-bottom:18px;box-shadow:0 4px 15px #00000012}
+.theme-selector{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;align-items:center}
+.theme-btn,.mode-toggle-btn{border:0;padding:7px 12px;border-radius:20px;cursor:pointer;background:var(--accent);color:var(--primary-dark);font-weight:800}
+.theme-btn{font-size:1.05rem;background:var(--primary);color:#fff}
+.theme-btn.active,.theme-btn:hover{background:var(--accent);color:var(--primary-dark);transform:scale(1.06)}
+.toolbar-export{display:flex;justify-content:center;border-top:1px solid var(--border-color);margin-top:12px;padding-top:12px}
+.pdf-export-btn,.btn{border:0;border-radius:10px;padding:10px 16px;cursor:pointer;font-weight:800;font-size:.95rem;background:var(--primary);color:#fff}
+.btn.secondary{background:var(--accent);color:var(--primary-dark)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.modules-nav{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;margin-bottom:16px}
+.module-tab{background:var(--card-bg);color:var(--primary);border:1.5px solid var(--primary-light);padding:8px 16px;border-radius:20px;font-weight:700;cursor:pointer;white-space:nowrap}
+.module-tab.active,.module-tab:hover{background:var(--primary);color:var(--accent)}
+.section-title{font-size:1.2rem;font-weight:800;color:var(--primary);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--accent);display:flex;align-items:center;justify-content:space-between;gap:8px}
+[data-mode=dark] .section-title{color:var(--accent)}
+.subjects-grid{display:flex;flex-direction:column;gap:12px}
+.subject-card{background:var(--card-bg);border-radius:var(--border-radius);box-shadow:0 2px 8px #00000012;overflow:hidden;border:1px solid var(--border-color)}
+.subject-header{padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:10px;cursor:pointer;background:var(--card-bg)}
+.subject-header:hover{background:var(--accent-light)}
+.subject-title{font-size:1rem;font-weight:700;display:flex;align-items:center;gap:8px}
+.lectures-list{padding:8px 16px 14px;border-top:1px solid var(--border-color)}
+.lecture-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 4px;border-bottom:1px dashed var(--border-color)}
+.lecture-row:last-child{border-bottom:0}
+.lecture-name{font-weight:600;line-height:1.5;overflow-wrap:anywhere}
+.lecture-open{white-space:nowrap}
+.quiz-card{padding:20px}
+.quiz-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.quiz-title{font-size:1.25rem;font-weight:800;color:var(--primary)}
+[data-mode=dark] .quiz-title{color:var(--accent)}
+.quiz-meta{color:var(--text-muted);font-weight:700}
+.question-text{font-size:1.12rem;line-height:1.8;font-weight:700;margin:16px 0}
+.options{display:grid;gap:10px}
+.option{display:flex;align-items:center;gap:10px;width:100%;text-align:right;padding:13px 14px;border:1px solid var(--border-color);border-radius:10px;background:var(--bg-color);color:var(--text-dark);cursor:pointer;font-size:1rem;line-height:1.5}
+.option:hover:not(:disabled){border-color:var(--accent);background:var(--accent-light)}
+.option.correct{border-color:#2E7D32;background:#E8F5E9;color:#1B5E20}
+.option.wrong{border-color:#C62828;background:#FFEBEE;color:#B71C1C}
+[data-mode=dark] .option.correct{background:#12351b;color:#a5f3ad}
+[data-mode=dark] .option.wrong{background:#3b1212;color:#ffb4b4}
+.option-symbol{font-size:1.2rem;font-weight:900;min-width:24px}
+.feedback{margin-top:14px;font-weight:800;line-height:1.7;min-height:25px}
+.feedback.correct{color:#2E7D32}.feedback.wrong{color:#C62828}
+.quiz-actions{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:18px}
+.quiz-progress{height:9px;border-radius:99px;background:#8883;overflow:hidden;margin:10px 0 16px}
+.quiz-progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-hover));transition:width .2s}
+.result-score{font-size:2rem;color:var(--primary);font-weight:800;text-align:center;margin:20px 0}
+[data-mode=dark] .result-score{color:var(--accent)}
+.result-message{text-align:center;color:var(--text-muted);margin-bottom:20px}
+.empty-note{color:var(--text-muted);line-height:1.8}
+footer{margin-top:40px;text-align:center;padding:18px 10px;background:var(--primary-dark);border-radius:var(--border-radius);box-shadow:0 4px 15px #0006;border-top:3px solid var(--accent);color:#fff}
+footer a{color:var(--accent);text-decoration:none;font-weight:800;font-size:1.05rem}
+.site-rights{margin-top:14px;color:var(--text-muted);font-size:.75rem}
+@media(max-width:600px){.subject-header{align-items:flex-start;flex-direction:column}.lecture-row{align-items:flex-start;flex-direction:column}.lecture-open{width:100%}.quiz-card{padding:15px}}
+@media print{.toolbar-card,.modules-nav,.lecture-open,.quiz-actions{display:none!important}body{background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>MCQ For Mediterm RM And NT Module</h1></header>
+<div class="toolbar-card">
+  <div class="theme-selector">
+    <button class="theme-btn active" onclick="setTheme('burgundy')" title="خريفي وبرغندي">🍁</button>
+    <button class="theme-btn" onclick="setTheme('sky')" title="سمائي وأزرق">🌊</button>
+    <button class="theme-btn" onclick="setTheme('rose')" title="وردي فاتح وغامق">🌸</button>
+    <button class="theme-btn" onclick="setTheme('brown')" title="بني وقهوائي">☕</button>
+    <button class="theme-btn" onclick="setTheme('green')" title="أخضر فاتح وغامق">🌿</button>
+    <button class="theme-btn" onclick="setTheme('purple')" title="بنفسجي">💜</button>
+    <button class="theme-btn" onclick="setTheme('teal')" title="تركوازي">🩵</button>
+    <button class="theme-btn" onclick="setTheme('orange')" title="برتقالي">🍊</button>
+    <button class="theme-btn" onclick="setTheme('midnight')" title="ليلي ورمادي وذهبي">🌙</button>
+    <button class="theme-btn" onclick="setTheme('lavender')" title="لافندر">🪻</button>
+    <button class="theme-btn" onclick="setTheme('ocean')" title="محيطي">🐬</button>
+    <button class="theme-btn" onclick="setTheme('olive')" title="زيتوني">🫒</button>
+    <button class="theme-btn" onclick="setTheme('slate')" title="رمادي هادئ">🩶</button>
+    <button class="theme-btn" onclick="setTheme('mint')" title="نعناعي">🍃</button>
+    <button class="theme-btn" onclick="setTheme('cherry')" title="كرزي">🍒</button>
+    <button class="theme-btn" onclick="setTheme('sand')" title="رملي وذهبي">🏜️</button>
+    <button class="theme-btn" onclick="setTheme('ice')" title="جليدي">🧊</button>
+    <button class="mode-toggle-btn" id="modeBtn" onclick="toggleMode()">☀️ فاتح</button>
+  </div>
+  <div class="toolbar-export"><button class="pdf-export-btn" onclick="window.print()">📄 Export / تصدير PDF</button></div>
+</div>
+<div id="quizView" hidden></div>
+<div id="libraryView">
+  <div class="modules-nav" id="modulesNav"></div>
+  <div id="modulesContainer"></div>
+  <p class="empty-note" style="text-align:center;margin-top:16px">اختَر المحاضرة حتى تبدأ الامتحان. الأسئلة للمحاضرات الأخرىضيفها بالتدريج.</p>
+</div>
+<footer><a href="https://t.me/medicinewithfunny" target="_blank" rel="noopener noreferrer">مشغل بواسطة: طب 🩺 وسد الباب🚪</a><div class="site-rights"><a href="https://t.me/hus_wi" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">جميع الحقوق محفوظة لـ Hus.Wi © 2026–2027</a></div></footer>
+</div>
+<script>
+const defaultModules = {
+ nt:{title:'NT | Nutrition',icon:'🥗',sections:[
+  {name:'📚 Community Medicine',subjects:[{id:'nt_comm',name:'Community Medicine',lectures:[
+   'Lec-1 Introduction to nutrition','Lec-2 Vitamins and mineral P1','Lec-3 Vitamins and mineral P2','Lec-4 Organic Nutrient','Lec-5 Energy balance'
+  ]}]},
+  {name:'🧪 Biochemistry',subjects:[{id:'nt_biochem',name:'Biochemistry',lectures:[
+   'Lec-1 Dyslipidemia I','Lec-2 Dyslipidemia II','Lec-3 Dyslipidemia Biochemical cardiovascular risk markers','Lec-4 Vitamins','Lec-5 Water-Soluble Vitamins','Lec-6 Water soluble Vitamins P2'
+  ]}]},
+  {name:'🩺 Medicine',subjects:[{id:'nt_medicine',name:'Medicine',lectures:[
+   'Lec-1 Hypovolemia and hypervolemia','Lec-2 Sodium Level Abnormalities','Lec-3 Obesity','Lec-4 Malnutrition and underweight','Lec-5 Wilson’s Disease'
+  ]}]},
+  {name:'🔪 Surgery',subjects:[{id:'nt_surgery',name:'Surgery',lectures:[
+   'Lec -1 PATHOPHYSIOLOGY OF FLUID BALANCE','Lec-2 Gangrene','Lec-3 Electrolytes and volume abnormalities'
+  ]}]}
+ ]},
+ rm:{title:'RM | Research Methodology',icon:'📊',sections:[
+  {name:'📚 Theoretical',subjects:[{id:'rm_theory',name:'Theoretical',lectures:[
+   'Lec-1 Introduction to Biostatistics','Lec-2 Introduction to Mathematical presentation of data','Lec-3&4 Graphical presentation of data','Lec-5 Analytic Sampling and Sampling Techniques','Lec-6 Probability in Medical Research and Clinical Decision Making','Lec-7 probability distribution','Lec-8 Estimation','Lec-9 Testing Hypothesis (Inferential Analysis)','Lec10 T-Test','Lec-11 Correlation and Regression Analysis','Lec-12 Chi square Test | ملحق','Lec-13 Hypothesis Testing and Z Distribution','Lec-14 Anova'
+  ]}]}
+ ]}
+};
+
+const quizzes = {
+ 'nt_surgery_2': [{"q": "How is hypovolemia primarily defined in clinical practice?", "options": ["An abnormally high intravascular volume state", "An abnormally low extracellular fluid state, mainly intravascular", "Accumulation of fluid within the intracellular compartment", "Isolated loss of intracellular electrolytes without fluid shift"], "answer": 1}, {"q": "Which of the following clinical conditions is an example of relative fluid loss due to third-spacing?", "options": ["Profuse sweating from heat stroke", "Acute upper gastrointestinal hemorrhage", "Fluid extravasation in acute pancreatitis", "Diuretic-induced renal loss"], "answer": 2}, {"q": "During the early compensated stage of hypovolemia, what immediate neurohumoral response is triggered by arterial baroreceptors?", "options": ["Sympathetic nervous system activation causing tachycardia and vasoconstriction", "Parasympathetic outflow leading to generalized vasodilation", "Direct suppression of renal renin release", "Immediate reduction in heart rate to conserve cardiac energy"], "answer": 0}, {"q": "What physiological mechanism occurs during the intermediate compensated stage of hypovolemia to shift fluid into the vascular bed?", "options": ["Shift of fluid from the interstitial to the intravascular space (auto-transfusion)", "Movement of intravascular fluid into the intracellular compartment", "Complete suppression of antidiuretic hormone (ADH) secretion", "Rapid loss of vascular tone and venous capacitance pooling"], "answer": 0}, {"q": "Accumulation of which metabolite leads to metabolic acidosis during severe microcirculatory hypoperfusion in hypovolemia?", "options": ["Urea", "Acetoacetate", "Lactate", "Bicarbonate"], "answer": 2}, {"q": "According to the ATLS classification, a blood loss of 15% to 30% corresponds to which hemorrhage severity class?", "options": ["Class I", "Class II", "Class III", "Class IV"], "answer": 1}, {"q": "Which combination of clinical signs is characteristic of ATLS Class III hemorrhage (30–40% blood loss)?", "options": ["Normal blood pressure and clear, alert mental status", "Hypotension, oliguria, and confusion", "Marked hypotension, anuria, and lethargy", "Bradycardia and wide pulse pressure"], "answer": 1}, {"q": "ATLS Class IV hemorrhage is defined by what percentage of blood volume loss?", "options": ["Under 15%", "15% - 30%", "30% - 40%", "Over 40%"], "answer": 3}, {"q": "What is the recommended vascular access setup for immediate stabilization of a patient in hypovolemic shock?", "options": ["Intra-arterial catheter only", "Single 22G peripheral IV line", "Subcutaneous fluid hypodermoclysis line", "Two large-bore IV lines (14-18G)"], "answer": 3}, {"q": "What is the target Mean Arterial Pressure (MAP) during hemorrhagic fluid resuscitation?", "options": ["≥ 65 mmHg", "≥ 85 mmHg", "≥ 100 mmHg", "≥ 45 mmHg"], "answer": 0}, {"q": "In hemorrhagic shock management, permissive hypotension maintains a systolic blood pressure target of what range until bleeding is controlled?", "options": ["60-70 mmHg", "110-120 mmHg", "130-140 mmHg", "80-90 mmHg"], "answer": 3}, {"q": "Which fluid type is considered first-line for non-hemorrhagic hypovolemic fluid resuscitation?", "options": ["5% Dextrose in Water (D5W)", "3% Hypertonic Saline", "Fresh Frozen Plasma (FFP)", "Isotonic crystalloids (e.g., Ringer's lactate or Normal Saline)"], "answer": 3}, {"q": "What is the target hourly urine output endpoint during fluid resuscitation in adults?", "options": ["≥ 0.1 mL/kg/hr", "≥ 0.5 mL/kg/hr", "≥ 2.0 mL/kg/hr", "≥ 5.0 mL/kg/hr"], "answer": 1}, {"q": "Fluid maldistribution (e.g., in sepsis or severe inflammation) typical results in which combination of volume derangements?", "options": ["Intravascular hypervolemia and interstitial dehydration", "Intravascular hypovolemia and interstitial edema", "Intracellular dehydration and normal extracellular volume", "Pure total body water deficit without fluid compartment shift"], "answer": 1}, {"q": "In hypovolemic hyponatremia caused by renal losses (such as diuretic use), urine sodium concentration is typically:", "options": ["Less than 5 mEq/L", "Zero", "Unmeasurable", "Over 20 mEq/L"], "answer": 3}, {"q": "Correcting severe hyponatremia too rapidly (exceeding 10 mEq/L daily) risks causing which severe neurological complication?", "options": ["Cerebral edema", "Brainstem herniation", "Central Pontine Myelinolysis (Osmotic Demyelination)", "Hydrocephalus"], "answer": 2}, {"q": "Rapid correction of hypernatremia with hypotonic fluids can cause which dangerous cerebral complication?", "options": ["Central pontine myelinolysis", "Cerebral edema and brainstem herniation", "Acute renal tubular necrosis", "Hyperchloremic metabolic alkalosis"], "answer": 1}, {"q": "What is the maximum recommended safe rate of sodium correction per hour in both hyponatremia and hypernatremia?", "options": ["0.5 mEq/L/hour", "2.0 mEq/L/hour", "5.0 mEq/L/hour", "10.0 mEq/L/hour"], "answer": 0}, {"q": "What is the leading cause of hyperkalemia in surgical patients?", "options": ["Excessive oral potassium intake", "Primary hyperaldosteronism", "Renal insufficiency", "Respiratory alkalosis"], "answer": 2}, {"q": "Pseudohyperkalemia can be caused in vitro by which of the following sampling artifacts?", "options": ["Severe intravascular hemolysis in vivo", "Hemolysis of red blood cells during blood sample aspiration", "Severe urinary potassium retention", "Acute renal shutdown"], "answer": 1}, {"q": "Which electrocardiographic (ECG) change is typically the earliest finding in hyperkalemia?", "options": ["Prominent U waves", "ST-segment elevation", "Prolonged QT interval", "Peaked T waves"], "answer": 3}, {"q": "What is the primary clinical purpose of administering IV Calcium Gluconate in acute severe hyperkalemia?", "options": ["To drive potassium into cells", "To promote renal excretion of potassium", "To stabilize myocyte membranes against cardiac arrhythmias", "To chelate potassium in the intestinal tract"], "answer": 2}, {"q": "Which treatment combination is administered to rapidly shift extracellular potassium into the intracellular compartment?", "options": ["Insulin with dextrose", "Calcium gluconate with furosemide", "Kayexalate with normal saline", "Spironolactone with potassium chloride"], "answer": 0}, {"q": "Which characteristic ECG abnormality is associated with hypokalemia?", "options": ["Prominent U waves", "Tall, tented T waves", "Widened QRS complex without P wave change", "Shortened PR interval"], "answer": 0}, {"q": "Why is direct intravenous push of Potassium Chloride (KCl) strictly contraindicated?", "options": ["It causes immediate severe hypokalemia", "It leads to severe hypoglycemia", "It causes lethal cardiac arrest (DEATH)", "It induces acute anaphylaxis"], "answer": 2}],
+ 'nt_surgery_1': [{"q": "What is the literal meaning of the Greek word \"gangraina\"?", "options": ["Sudden cessation of arterial flow", "Eating sore and putrefaction of tissue", "Bacterial infection of blood", "Chronic inflammation of skin"], "answer": 1}, {"q": "How is gangrene defined macroscopically in clinical pathology?", "options": ["Macroscopic death of tissue following loss of blood supply", "Microscopic cellular apoptosis due to genetic mutations", "Reversible tissue ischemia without necrosis", "Localized hypertrophy of subcutaneous adipose tissue"], "answer": 0}, {"q": "What is the correct sequence in the pathogenesis of gangrene?", "options": ["Bacterial colonization -> Cell death -> Reduced blood supply -> Toxins", "Toxins -> Line of demarcation -> Oxygen lack -> Cell death", "Reduced blood supply -> Oxygen lack -> Cell death -> Bacterial colonization", "Line of demarcation -> Bacterial colonization -> Ischemia -> Cell death"], "answer": 2}, {"q": "According to the lecture, what is the most common cause of gangrene?", "options": ["Deep fungal infection", "Severe physical burns", "Blunt trauma", "Ischemia"], "answer": 3}, {"q": "What is listed as the most common risk factor for the development of gangrene?", "options": ["Hypertension", "Diabetes Mellitus", "Smoking", "Chronic renal failure"], "answer": 1}, {"q": "Which of the following features is characteristic of Dry Gangrene?", "options": ["Swollen, moist, and foul-smelling tissue", "Rapid onset with severe systemic toxemia", "Tissue dries, shrinks, turns black, with a clear line of demarcation", "Absence of arterial blockage"], "answer": 2}, {"q": "How does Wet Gangrene primarily differ from Dry Gangrene regarding the line of demarcation and toxemia?", "options": ["Wet gangrene has a clear demarcation and minimal toxemia", "Dry gangrene has severe toxemia and offensive odor", "Both have identical lines of demarcation and onset speed", "Wet gangrene has no clear line of demarcation and severe toxemia"], "answer": 3}, {"q": "What microorganism is the primary causative agent of Gas Gangrene?", "options": ["Clostridium perfringens", "Streptococcus pyogenes", "Staphylococcus aureus", "Escherichia coli"], "answer": 0}, {"q": "Which physical examination finding is uniquely characteristic of Gas Gangrene due to gas production in necrotic tissue?", "options": ["Black dry mummified toes", "Soft tissue crepitus and tense swelling", "Pale, cold limb with absent sensation only", "Slowly spreading superficial erythema"], "answer": 1}, {"q": "Which specific intravenous antibiotic combination is recommended in the management of Gas Gangrene?", "options": ["Amoxicillin + Clarithromycin", "Vancomycin + Ciprofloxacin", "Metronidazole + Gentamicin", "Penicillin + Clindamycin"], "answer": 3}, {"q": "What is the hallmark clinical presentation of Necrotising Fasciitis in its early stages?", "options": ["Pain out of proportion to clinical signs", "Widespread obvious skin gangrene immediately", "High fever with complete absence of pain", "Painless ulceration of the heel"], "answer": 0}, {"q": "How is Type 1 Necrotising Fasciitis classified microbiologically compared to Type 2?", "options": ["Type 1 is monomicrobial; Type 2 is polymicrobial", "Type 1 is polymicrobial; Type 2 is monomicrobial", "Type 1 is fungal; Type 2 is viral", "Type 1 is parasitic; Type 2 is clostridial"], "answer": 1}, {"q": "Fournier's Gangrene is specifically defined as necrotising fasciitis affecting which anatomical region?", "options": ["Lower extremity and foot", "Upper limb and axilla", "Perineum and genitalia", "Scalp and facial skin"], "answer": 2}, {"q": "Which of the following is a common primary source of infection leading to Fournier's Gangrene?", "options": ["Anorectal or urogenital source", "Pulmonary infection", "Ocular trauma", "Middle ear infection"], "answer": 0}, {"q": "What role does neuropathy play in the pathophysiology of Diabetic Foot Gangrene?", "options": ["Causes immediate severe vascular spasm", "Prevents bacterial colonization of wounds", "Directly causes gas production in healthy tissue", "Leads to painless trauma, resulting in unnoticed ulceration"], "answer": 3}, {"q": "What clinical features characterize acute arterial embolus causing ischemic limb gangrene?", "options": ["Sudden pain, pallor, and pulselessness", "Painless swelling and erythema", "Hyperpigmentation and chronic warmth", "Subcutaneous crepitus and blisters"], "answer": 0}, {"q": "What crucial examination step must never be missed when assessing a diabetic foot patient?", "options": ["Checking pupillary light reflex", "Testing deep tendon reflexes of upper limbs", "Palpating peripheral pulses", "Measuring abdominal girth"], "answer": 2}, {"q": "Which initial imaging modality is useful for detecting gas in soft tissues or underlying osteomyelitis in gangrene?", "options": ["Plain X-ray", "Positron Emission Tomography (PET)", "Contrast Echocardiography", "Scintigraphy"], "answer": 0}, {"q": "Which vascular investigation is used to plan surgical or endovascular revascularization in ischemic limb gangrene?", "options": ["Plain chest radiograph", "Venous duplex scan only", "Bone scan", "CT angiography"], "answer": 3}, {"q": "What is the first step in the medical management of a patient presenting with toxic gangrene?", "options": ["Immediate elective skin grafting", "Resuscitation first with IV fluids and oxygen", "Application of topical wound ointments only", "Immediate discharge on oral pain medications"], "answer": 1}, {"q": "What is the recommended management approach for uncomplicated, sterile Dry Gangrene?", "options": ["Immediate emergency high-thigh amputation", "High-dose systemic steroids", "Await autoamputation or perform elective amputation", "Hyperbaric oxygen monotherapy"], "answer": 2}, {"q": "When is surgical fasciotomy indicated in the management of gangrene?", "options": ["For small superficial skin blisters", "For gas gangrene or compartment syndrome", "For chronic stable dry gangrene", "For mild neuropathic pain without necrosis"], "answer": 1}, {"q": "According to the lecture's take-home points, what intervention becomes necessary if gangrene extends to the bone?", "options": ["Local wound dressing", "Hyperbaric oxygen therapy alone", "Long-term oral analgesia", "Amputation"], "answer": 3}, {"q": "The word \"amputation\" originates from the Latin word \"amputare\", which literally means:", "options": ["To stitch or sew", "To cut around or to prune", "To burn or cauterize", "To stretch or pull"], "answer": 1}, {"q": "Which of the following is categorized as a physical cause of gangrene in the lecture?", "options": ["Frostbite, burns, and irradiation", "Atherosclerosis and thrombosis", "Clostridial and streptococcal infections", "Diabetic distal polyneuropathy"], "answer": 0}],
+ 'nt_surgery_0': [{"q": "What is the approximate percentage of Total Body Water (TBW) relative to total body weight in a healthy adult male?", "options": ["45%", "55%", "60%", "75%"], "answer": 2}, {"q": "For a healthy 70 kg adult male, what is the approximate volume of the intracellular fluid (ICF) compartment?", "options": ["3.5 Liters", "10.5 Liters", "14 Liters", "28 Liters"], "answer": 3}, {"q": "Which electrolyte is the predominant cation in the intracellular fluid (ICF) compartment?", "options": ["Sodium (Na+)", "Potassium (K+)", "Calcium (Ca2+)", "Chloride (Cl-)"], "answer": 1}, {"q": "Which mechanism primarily maintains the concentration gradient of sodium and potassium across cell membranes?", "options": ["Passive simple diffusion", "Gibbs-Donnan osmotic filtration", "ATP-driven Na+/K+ ATPase pumps", "Capillary hydrostatic pressure"], "answer": 2}, {"q": "A patient presents with a serum sodium of 140 mEq/L, blood glucose of 180 mg/dL, and BUN of 28 mg/dL. What is the calculated total serum osmolality?", "options": ["280 mOsm/L", "290 mOsm/L", "300 mOsm/L", "310 mOsm/L"], "answer": 2}, {"q": "Why is urea classified as an ineffective osmole when calculating effective osmolality (EOsm)?", "options": ["It is actively transported out of cells by primary transport", "It freely crosses cell membranes and equilibrates between compartments", "It binds permanently to plasma proteins", "It induces rapid, sustained fluid shifts into cells"], "answer": 1}, {"q": "What happens to red blood cells when placed in a hypertonic solution such as 2% NaCl?", "options": ["They absorb water, swell, and burst", "They lose water and become shrunken and crenated", "They retain their normal biconcave shape without volume change", "They undergo immediate cell division"], "answer": 1}, {"q": "Which solute is excluded from the calculation of Effective Osmolality (EOsm)?", "options": ["Serum Sodium (Na+)", "Blood Urea Nitrogen (BUN)", "Serum Glucose", "Both Sodium and Glucose"], "answer": 1}, {"q": "A decrease in Effective Arterial Blood Volume (EABV) activates high-pressure arterial baroreceptors, triggering which neurohumoral response?", "options": ["Parasympathetic outflow leading to bradycardia", "Direct inhibition of antidiuretic hormone (ADH) release", "Increased sympathetic outflow leading to vasoconstriction and tachycardia", "Suppression of the renin-angiotensin-aldosterone system"], "answer": 2}, {"q": "Which enzyme cleaves angiotensinogen into Angiotensin I in response to reduced renal blood flow?", "options": ["Angiotensin-converting enzyme (ACE)", "Renin", "Aldosterone", "Vasopressin"], "answer": 1}, {"q": "Which of the following is NOT a direct physiological action of Angiotensin II?", "options": ["Peripheral arteriolar vasoconstriction", "Stimulation of aldosterone synthesis and release", "Suppression of the proximal tubule Na+/H+ antiporter", "Direct stimulation of the hypothalamic thirst center"], "answer": 2}, {"q": "Where is Antidiuretic Hormone (ADH) synthesized, and from where is it released into the bloodstream?", "options": ["Synthesized in the anterior pituitary, released from the adrenal cortex", "Synthesized in the hypothalamus, released from the posterior pituitary", "Synthesized in the juxtaglomerular apparatus, released from the adrenal medulla", "Synthesized in the liver, released from the lungs"], "answer": 1}, {"q": "What is a primary renal effect of Atrial Natriuretic Peptide (ANP) during hypervolemia?", "options": ["Stimulation of renin and aldosterone release", "Direct inhibition of renal sodium reabsorption and suppression of ADH", "Efferent arteriolar constriction with decreased GFR", "Stimulation of renal water reabsorption"], "answer": 1}, {"q": "How does Prostaglandin E2 (PGE2) act within the kidney to offset the effects of Angiotensin II?", "options": ["It constricts the afferent arteriole", "It vasodilates the afferent arteriole", "It completely blocks glomerular filtration", "It stimulates aldosterone secretion"], "answer": 1}, {"q": "What formula is used to calculate the renal Filtration Fraction (FF)?", "options": ["FF = RPF ÷ GFR", "FF = GFR ÷ RPF", "FF = GFR × RPF", "FF = U_Na ÷ GFR"], "answer": 1}, {"q": "In a state of volume contraction (↓EABV), how do peritubular Starling forces adjust to increase proximal tubule sodium reabsorption?", "options": ["Hydrostatic pressure (P_H) increases and oncotic pressure (P_O) decreases", "Hydrostatic pressure (P_H) decreases and oncotic pressure (P_O) increases", "Both hydrostatic and oncotic pressures drop to zero", "Both hydrostatic and oncotic pressures increase equally"], "answer": 1}, {"q": "What is the expected urinary sodium (U_Na) level in a patient experiencing severe hypovolemia?", "options": ["Greater than 40 mEq/L", "Between 20 and 40 mEq/L", "Less than 20 mEq/L (often near 0)", "Exactly 154 mEq/L"], "answer": 2}, {"q": "What is the average normal total daily water intake and output in a healthy adult under normal environmental conditions?", "options": ["1,500 mL/day", "2,000 mL/day", "2,500 mL/day", "3,500 mL/day"], "answer": 2}, {"q": "What is the minimum daily urine volume required to excrete metabolic waste products under normal physiological conditions?", "options": ["100 - 200 mL/day", "300 - 500 mL/day", "800 - 1000 mL/day", "1200 - 1500 mL/day"], "answer": 1}, {"q": "By what percentage do insensible water losses increase for each degree Celsius elevation in body temperature above 37.2°C?", "options": ["5%", "10%", "15%", "20%"], "answer": 1}, {"q": "What are the concentrations of sodium and chloride in 0.9% Normal Saline?", "options": ["130 mEq/L Na+, 109 mEq/L Cl-", "142 mEq/L Na+, 103 mEq/L Cl-", "154 mEq/L Na+, 154 mEq/L Cl-", "513 mEq/L Na+, 513 mEq/L Cl-"], "answer": 2}, {"q": "In Lactated Ringer's solution, what component is converted into bicarbonate by the liver after infusion?", "options": ["Acetate", "Lactate", "Citrate", "Gluconate"], "answer": 1}, {"q": "Why is 5% Dextrose (D5) added to hypotonic saline solutions (e.g., D5 0.45% NaCl)?", "options": ["To induce severe hyperchloremic acidosis", "To maintain osmolality and prevent red blood cell lysis", "To stimulate renal renin secretion", "To cause rapid intravascular expansion in trauma"], "answer": 1}, {"q": "What is a major clinical safety concern associated with the use of synthetic colloids like Hydroxyethyl Starch (Hetastarch)?", "options": ["Coagulopathy and bleeding complications", "Severe hyperkalemia", "Hypoglycemia", "Severe hypernatremia"], "answer": 0}, {"q": "Using the standard 100/50/20 rule, what is the calculated daily maintenance fluid requirement for a 70 kg adult male?", "options": ["2,000 mL/day", "2,200 mL/day", "2,500 mL/day", "3,000 mL/day"], "answer": 2}],
+ 'nt_comm_0': [
+  {q:'What is nutrition?',options:['The process by which the body takes in and uses food','The study of medicines only','The process of breathing','The removal of body waste only'],answer:0},
+  {q:'Which nutrient is the body’s main source of energy?',options:['Vitamins','Carbohydrates','Minerals','Water'],answer:1},
+  {q:'Which nutrient is mainly needed for growth and tissue repair?',options:['Protein','Water','Vitamins','Minerals'],answer:0},
+  {q:'Which nutrient provides the most energy per gram?',options:['Carbohydrate','Protein','Fat','Water'],answer:2},
+  {q:'How many kilocalories are provided by 1 gram of carbohydrate?',options:['2 kcal','4 kcal','7 kcal','9 kcal'],answer:1},
+  {q:'How many kilocalories are provided by 1 gram of protein?',options:['4 kcal','6 kcal','7 kcal','9 kcal'],answer:0},
+  {q:'How many kilocalories are provided by 1 gram of fat?',options:['2 kcal','4 kcal','7 kcal','9 kcal'],answer:3},
+  {q:'Which of the following is a macronutrient?',options:['Vitamin C','Iron','Carbohydrate','Vitamin D'],answer:2},
+  {q:'Which of the following is a micronutrient?',options:['Fat','Protein','Carbohydrate','Vitamin A'],answer:3},
+  {q:'Which nutrient is essential for regulating body temperature and transporting substances?',options:['Water','Cholesterol','Starch','Fiber only'],answer:0},
+  {q:'A balanced diet is one that:',options:['Contains only protein-rich foods','Provides nutrients in appropriate amounts and proportions','Excludes all fats','Contains only fruits'],answer:1},
+  {q:'Which of the following is a source of dietary fiber?',options:['White sugar','Vegetables and whole grains','Butter','Egg white only'],answer:1},
+  {q:'Which vitamin is fat-soluble?',options:['Vitamin C','Vitamin B1','Vitamin A','Vitamin B12'],answer:2},
+  {q:'Which vitamins are water-soluble?',options:['A and D','E and K','B-complex and C','A and K'],answer:2},
+  {q:'Which mineral is important for hemoglobin formation?',options:['Iron','Iodine','Sodium','Fluoride'],answer:0},
+  {q:'Iodine is required for the synthesis of:',options:['Insulin','Thyroid hormones','Hemoglobin','Bile salts'],answer:1},
+  {q:'Which condition can result from severe vitamin C deficiency?',options:['Scurvy','Rickets','Night blindness','Goiter'],answer:0},
+  {q:'Vitamin D deficiency in children may cause:',options:['Scurvy','Rickets','Pellagra','Beriberi'],answer:1},
+  {q:'Which vitamin is important for normal blood clotting?',options:['Vitamin K','Vitamin C','Vitamin B1','Vitamin A'],answer:0},
+  {q:'Which of the following is a good source of complete protein?',options:['Eggs','Sugar','Olive oil','Soft drinks'],answer:0},
+  {q:'Which nutrient is the main component of cell membranes?',options:['Phospholipids','Glucose only','Vitamin C','Water only'],answer:0},
+  {q:'Malnutrition can mean:',options:['Only undernutrition','Only obesity','Deficiency, excess, or imbalance of nutrients','Eating three meals daily'],answer:2},
+  {q:'Which measure is commonly used to screen adult weight status?',options:['Blood group','Body mass index (BMI)','Height alone','Pulse rate alone'],answer:1},
+  {q:'Which food group is generally rich in vitamins, minerals, and fiber?',options:['Vegetables and fruits','Candy','Butter and ghee','Sugary drinks'],answer:0},
+  {q:'The main goal of nutrition is to:',options:['Avoid all carbohydrates','Support health, growth, and normal body function','Eat the same food every day','Eliminate water from the diet'],answer:1}
+ ],
+ 'nt_comm_1': [
+  {q:'What is meant by hidden hunger?',options:['Excessive food consumption','Deficiency of vitamins and minerals','Excessive protein intake','Lack of water'],answer:1},
+  {q:'Which of the following is associated with micronutrient malnutrition?',options:['Improved cognitive function','Increased physical development','Reduced immune function','Increased muscle mass'],answer:2},
+  {q:'In which year was the term "hidden hunger" coined by WHO, according to the lecture?',options:['1976','1980','1986','1996'],answer:2},
+  {q:'Which of the following micronutrients is associated with hidden hunger?',options:['Vitamin A','Vitamin C only','Vitamin B12 only','Vitamin E only'],answer:0},
+  {q:'Vitamin A deficiency is a leading cause of preventable blindness in:',options:['Elderly adults','Children','Athletes','Pregnant women only'],answer:1},
+  {q:'What is the first ocular symptom of vitamin A deficiency?',options:['Corneal ulceration',"Bitot's spots",'Night blindness','Keratomalacia'],answer:2},
+  {q:'Night blindness occurs because of impaired:',options:['Color vision','Dark adaptation','Hearing','Balance'],answer:1},
+  {q:'Which condition is characterized by dryness and loss of normal luster of the conjunctiva?',options:['Conjunctival xerosis','Keratomalacia','Osteomalacia','Rickets'],answer:0},
+  {q:"Bitot's spots are typically described as:",options:['Red spots on the eyelids','Triangular, foamy, whitish-yellow spots on the bulbar conjunctiva','Black spots on the cornea','Blue spots on the iris'],answer:1},
+  {q:'Which condition involves liquefaction of the cornea?',options:['Night blindness','Conjunctival xerosis','Keratomalacia',"Bitot's spots"],answer:2},
+  {q:'Which of the following is a serious complication of corneal xerosis?',options:['Hearing loss','Corneal ulceration','Hypertension','Anemia'],answer:1},
+  {q:'According to the lecture, which vitamin is mainly synthesized in the skin through UVB exposure?',options:['Vitamin A','Vitamin B12','Vitamin C','Vitamin D3'],answer:3},
+  {q:'Approximately what percentage of vitamin D is obtained through skin synthesis, according to the lecture?',options:['10%','25%','50%','90%'],answer:3},
+  {q:'What is the wavelength range of UVB radiation mentioned in the lecture?',options:['100–200 nm','200–250 nm','290–315 nm','400–500 nm'],answer:2},
+  {q:'Which of the following does NOT produce vitamin D through UVB exposure?',options:['Direct sunlight on the skin','Midday sunlight on exposed skin','Sunshine through a window','Outdoor sunlight exposure'],answer:2},
+  {q:'Which of the following is a good dietary source of vitamin D3?',options:['Fatty fish','White sugar','Refined flour','Table salt'],answer:0},
+  {q:'Vitamin D2 is also known as:',options:['Retinol','Ergocalciferol','Cholecalciferol','Calcitonin'],answer:1},
+  {q:'Vitamin D3 is also known as:',options:['Ergocalciferol','Retinol','Cholecalciferol','Tocopherol'],answer:2},
+  {q:'Which of the following is an important function of vitamin D?',options:['Preventing all infections','Supporting calcium absorption','Preventing all cancers','Increasing blood glucose'],answer:1},
+  {q:'Severe vitamin D deficiency in children causes:',options:['Scurvy','Pellagra','Rickets','Night blindness'],answer:2},
+  {q:'Which of the following is a sign of rickets in children?',options:['Bowed bones','Night blindness',"Bitot's spots",'Conjunctival dryness'],answer:0},
+  {q:'Which of the following may be a symptom of vitamin D deficiency in adults?',options:['Muscle weakness','Improved bone strength','Increased night vision','Improved physical function'],answer:0},
+  {q:'According to the lecture, what is the recommended daily vitamin D intake for infants from birth to 12 months?',options:['100 IU','200 IU','400 IU','1,000 IU'],answer:2},
+  {q:'According to the lecture, all breastfed infants should receive:',options:['Vitamin A only','Vitamin D supplementation','Iron supplementation only','Calcium supplementation only'],answer:1},
+  {q:'When is it recommended in the lecture to check serum 25-OH vitamin D levels after starting supplementation?',options:['After one week','After two to three months','After one year','After five years'],answer:1}
+ ],
+ 'nt_comm_2': [
+  {q:'What is the most commonly recognized cause of anemia?',options:['Vitamin C deficiency','Iron deficiency','Calcium deficiency','Vitamin D deficiency'],answer:1},
+  {q:'Which group is particularly vulnerable to iron deficiency anemia (IDA)?',options:['Children under 2 years','Healthy adults only','Men over 50 years only','Athletes only'],answer:0},
+  {q:'According to the lecture, what is the normal hemoglobin level for children aged 6–59 months?',options:['≥ 8 g/dL','≥ 9 g/dL','≥ 11 g/dL','≥ 13 g/dL'],answer:2},
+  {q:'According to the lecture, severe anemia in children aged 6–59 months is defined as:',options:['Hb < 7 g/dL','Hb < 8 g/dL','Hb < 10 g/dL','Hb < 11 g/dL'],answer:0},
+  {q:'What is the recommended daily iron intake for children aged 1–3 years?',options:['5 mg/day','7 mg/day','10 mg/day','15 mg/day'],answer:1},
+  {q:'What is the recommended daily iron intake for pregnant women aged 19–50 years?',options:['8 mg/day','9 mg/day','18 mg/day','27 mg/day'],answer:3},
+  {q:'Which type of dietary iron is absorbed most easily?',options:['Non-haem iron','Haem iron','Plant iron only','Fortified iron only'],answer:1},
+  {q:'Haem iron is primarily obtained from:',options:['Fruits and vegetables','Whole grains','Meat, poultry, and fish','Nuts and seeds'],answer:2},
+  {q:'What is the approximate absorption rate of haem iron according to the lecture?',options:['2–5%','2–20%','15–35%','40–60%'],answer:2},
+  {q:'Which of the following is a source of non-haem iron?',options:['Meat only','Fish only','Dark green leafy vegetables','Poultry only'],answer:2},
+  {q:'What is the approximate absorption rate of non-haem iron?',options:['2–20%','15–35%','40–50%','60–70%'],answer:0},
+  {q:'Which vitamin enhances iron absorption?',options:['Vitamin A','Vitamin B12','Vitamin C','Vitamin D'],answer:2},
+  {q:'Which substance inhibits the absorption of both haem and non-haem iron?',options:['Vitamin C','Calcium','Vitamin B6','Ascorbic acid'],answer:1},
+  {q:'Which of the following contains polyphenols that inhibit iron absorption?',options:['Black tea','Orange juice','Fresh lemon juice','Plain water'],answer:0},
+  {q:'Phytates are commonly found in:',options:['Seeds, nuts, legumes, and whole grains','Meat and fish only','Milk and cheese only','Eggs and poultry only'],answer:0},
+  {q:'Which substance can help overcome the effects of dietary inhibitors of iron absorption?',options:['Calcium','Tannins','Ascorbic acid','Oxalic acid'],answer:2},
+  {q:'Which of the following increases iron demand?',options:['Rapid growth during childhood','Drinking water','Sleeping','Reduced physical activity'],answer:0},
+  {q:'During which stages of pregnancy does iron demand increase according to the lecture?',options:['First trimester only','Second and third trimesters','After delivery only','Before pregnancy only'],answer:1},
+  {q:'Which of the following can cause increased iron loss?',options:['Frequent blood donation','Eating vegetables','Drinking water','Adequate iron intake'],answer:0},
+  {q:'Which of the following is a cause of decreased iron intake?',options:['Eating a balanced diet','Eating iron-rich foods','An inadequate diet','Consuming vitamin C'],answer:2},
+  {q:'Which infection is associated with decreased iron absorption in the lecture?',options:['Helicobacter pylori infection','Common cold only','Influenza only','Chickenpox only'],answer:0},
+  {q:'Which of the following diseases can cause iron malabsorption?',options:['Celiac disease','Myopia','Asthma','Hypertension'],answer:0},
+  {q:'What is the recommended daily iodine intake for schoolchildren aged 6–12 years?',options:['60 micrograms','90 micrograms','120 micrograms','250 micrograms'],answer:2},
+  {q:'What is the recommended daily iodine intake for pregnant and lactating women according to the lecture?',options:['90 micrograms','120 micrograms','150 micrograms','250 micrograms'],answer:3},
+  {q:'Which of the following is a consequence of iodine deficiency disorders (IDD)?',options:['Goiter','Improved thyroid function','Increased hemoglobin','Increased iron absorption'],answer:0}
+ ],
+ 'nt_comm_3': [
+  {q:'What is the main function of carbohydrates in the human body?',options:['Building antibodies only','Providing energy','Producing hormones only','Storing vitamins'],answer:1},
+  {q:'Which of the following is a simple carbohydrate?',options:['Cellulose','Starch','Glucose','Glycogen'],answer:2},
+  {q:'Which of the following is a disaccharide?',options:['Glucose','Fructose','Galactose','Sucrose'],answer:3},
+  {q:'What is the storage form of carbohydrates in the human body?',options:['Cellulose','Glycogen','Lactose','Sucrose'],answer:1},
+  {q:'Which of the following foods is a good source of carbohydrates?',options:['Rice','Eggs','Fish','Butter'],answer:0},
+  {q:'How much energy does 1 gram of carbohydrate provide?',options:['2 kcal','4 kcal','7 kcal','9 kcal'],answer:1},
+  {q:'Which carbohydrate is commonly known as fruit sugar?',options:['Lactose','Maltose','Fructose','Glycogen'],answer:2},
+  {q:'Which of the following is a complex carbohydrate?',options:['Glucose','Fructose','Starch','Sucrose'],answer:2},
+  {q:'What are the basic building blocks of proteins?',options:['Fatty acids','Amino acids','Monosaccharides','Vitamins'],answer:1},
+  {q:'What is one of the main functions of proteins?',options:['Tissue growth and repair','Providing dietary fiber','Preventing all infections','Producing glucose only'],answer:0},
+  {q:'How much energy does 1 gram of protein provide?',options:['2 kcal','4 kcal','7 kcal','9 kcal'],answer:1},
+  {q:'Which of the following is a high-quality protein source?',options:['Sugar','Olive oil','Eggs','Soft drinks'],answer:2},
+  {q:'What are essential amino acids?',options:['Amino acids that the body cannot synthesize in sufficient amounts','Amino acids that provide no energy','Amino acids found only in plants','Amino acids that are not needed by the body'],answer:0},
+  {q:'Which of the following is a function of antibodies?',options:['Digesting fats','Transporting oxygen','Supporting immune defense','Storing glycogen'],answer:2},
+  {q:'Which of the following foods is a good plant-based protein source?',options:['Lentils','Butter','Honey','Sugar'],answer:0},
+  {q:'Which protein is responsible for transporting oxygen in the blood?',options:['Insulin','Hemoglobin','Keratin','Collagen'],answer:1},
+  {q:'Severe protein deficiency in children may cause which condition?',options:['Scurvy','Rickets','Kwashiorkor','Night blindness'],answer:2},
+  {q:'How much energy does 1 gram of fat provide?',options:['2 kcal','4 kcal','7 kcal','9 kcal'],answer:3},
+  {q:'Which of the following is a major function of dietary fat?',options:['Providing concentrated energy','Forming dietary fiber','Preventing all diseases','Replacing all proteins'],answer:0},
+  {q:'Which of the following is a source of unsaturated fat?',options:['Olive oil','Butter','Animal fat','Fatty meat'],answer:0},
+  {q:'Which vitamins are fat-soluble?',options:['Vitamins B and C','Vitamins B1 and B12','Vitamins A, D, E, and K','Vitamins C and B6'],answer:2},
+  {q:'Which type of fat is generally considered more beneficial for cardiovascular health when replacing saturated fat?',options:['Unsaturated fat','Trans fat','Hydrogenated fat','Excess saturated fat'],answer:0},
+  {q:'What is the main storage form of fat in the human body?',options:['Glycogen','Triglycerides','Amino acids','Glucose'],answer:1},
+  {q:'Which of the following is an essential fatty acid?',options:['Linoleic acid','Palmitic acid','Stearic acid','Butyric acid'],answer:0},
+  {q:'Which of the following is a function of fat in the human body?',options:['Insulating the body and protecting organs','Forming glucose as its only function','Preventing the absorption of all vitamins','Replacing the need for water'],answer:0}
+ ],
+ 'nt_comm_4': [
+  {q:'What is energy balance?',options:['Energy intake is greater than energy expenditure','Energy intake is less than energy expenditure','Energy intake equals energy expenditure','Energy expenditure stops'],answer:2},
+  {q:'Which of the following nutrients provides 9 kcal/g?',options:['Carbohydrates','Protein','Fat','Alcohol'],answer:2},
+  {q:'How much energy does 1 gram of carbohydrate provide?',options:['2 kcal','4 kcal','7 kcal','9 kcal'],answer:1},
+  {q:'How much energy does 1 gram of protein provide?',options:['4 kcal','5 kcal','7 kcal','9 kcal'],answer:0},
+  {q:'How much energy does 1 gram of alcohol provide?',options:['2 kcal','4 kcal','7 kcal','9 kcal'],answer:2},
+  {q:'What is the primary energy currency of the body?',options:['DNA','ATP','RNA','Glycogen'],answer:1},
+  {q:'What does BMR stand for?',options:['Body Mass Requirement','Basal Metabolic Rate','Basic Muscle Response','Body Metabolic Regulation'],answer:1},
+  {q:'What is the definition of Basal Metabolic Rate (BMR)?',options:['Energy used only during exercise','Energy required for digestion only','Minimum energy required to maintain essential body functions at rest','Total energy consumed during a day'],answer:2},
+  {q:'Which of the following is a major determinant of total energy requirements?',options:['Basal metabolic rate','Hair color','Eye color','Blood group'],answer:0},
+  {q:'Which of the following is a component of total energy expenditure?',options:['Basal metabolic rate','Physical activity','Thermic effect of food','All of the above'],answer:3},
+  {q:'Which method measures the heat produced by the body?',options:['Indirect calorimetry','Direct calorimetry','Blood pressure measurement','Electrocardiography'],answer:1},
+  {q:'Which method measures oxygen consumption and carbon dioxide production?',options:['Direct calorimetry','Indirect calorimetry','Body mass index','Skinfold measurement'],answer:1},
+  {q:'Which of the following can influence BMR?',options:['Age','Sex','Hormonal status','All of the above'],answer:3},
+  {q:'How does aging generally affect BMR?',options:['BMR always increases','BMR generally decreases','BMR remains constant','BMR becomes zero'],answer:1},
+  {q:'Which hormone has an important role in regulating metabolic rate?',options:['Thyroid hormone','Melatonin only','Insulin only','Oxytocin only'],answer:0},
+  {q:'Which body composition characteristic is associated with a higher BMR?',options:['Greater lean body mass','Lower muscle mass','Lower body temperature','Reduced organ activity'],answer:0},
+  {q:'What happens when energy intake exceeds energy expenditure?',options:['Negative energy balance','Positive energy balance','Energy balance becomes zero permanently','Body fat is always depleted'],answer:1},
+  {q:'What is the likely result of a sustained positive energy balance?',options:['Decreased body weight','Increased body weight','Complete loss of body fat','Decreased energy storage'],answer:1},
+  {q:'What happens during negative energy balance?',options:['Energy intake exceeds energy expenditure','Energy intake equals energy expenditure','Energy expenditure exceeds energy intake','The body stops using energy'],answer:2},
+  {q:'Which substance is stored in the liver and muscles as a readily available energy reserve?',options:['Glycogen','Calcium','Vitamin C','Water'],answer:0},
+  {q:'What is the main function of glycogen stores during sleep?',options:['To produce vitamins','To help maintain normal blood glucose levels','To build bones directly','To increase fat absorption'],answer:1},
+  {q:'Where is most of the body’s stored fat found?',options:['Adipose tissue','Bone tissue','Nervous tissue','Cartilage'],answer:0},
+  {q:'When may the body use muscle protein as an energy source?',options:['Only after every meal','During prolonged fasting or starvation','Only during sleep','Only after drinking water'],answer:1},
+  {q:'Which of the following is a benefit of physical activity?',options:['Increased risk of heart disease','Increased stress and anxiety','Improved sleep','Reduced bone strength'],answer:2},
+  {q:'Which of the following is another benefit of regular physical activity?',options:['Increased risk of diabetes','Lowered risk of high blood pressure','Increased risk of certain cancers','Reduced independence in later life'],answer:1}
+ ],
+ 'nt_biochem_0': [
+  {q:'What are lipids?',options:['Water-soluble organic molecules','Water-insoluble organic molecules','Inorganic molecules','Proteins that transport oxygen'],answer:1},
+  {q:'Which of the following is a major function of cholesterol?',options:['Transporting oxygen','Producing insulin','Acting as a precursor of steroid hormones','Breaking down proteins'],answer:2},
+  {q:'Which of the following is NOT a major type of lipoprotein?',options:['Chylomicrons','VLDL','LDL','Hemoglobin'],answer:3},
+  {q:'Why are lipoproteins necessary for lipid transport in blood?',options:['Lipids are highly soluble in water','Lipids cannot be transported in blood as pure lipids','Lipids are converted into glucose','Lipids do not require transport'],answer:1},
+  {q:'Which apolipoprotein activates lipoprotein lipase (LPL)?',options:['Apo A-I','Apo B-100','Apo C-II','Apo E'],answer:2},
+  {q:'Which lipoprotein primarily transports dietary (exogenous) triglycerides?',options:['LDL','HDL','VLDL','Chylomicrons'],answer:3},
+  {q:'Which enzyme removes most triglycerides from chylomicrons?',options:['Lipoprotein lipase (LPL)','Lecithin-cholesterol acyltransferase (LCAT)','Amylase','Pepsin'],answer:0},
+  {q:'Which lipoprotein is normally absent from fasting blood?',options:['LDL','HDL','Chylomicrons','VLDL'],answer:2},
+  {q:'Which lipoprotein contains approximately 98% lipids, mainly triglycerides?',options:['HDL','Chylomicrons','LDL','IDL'],answer:1},
+  {q:'Which lipoprotein is primarily responsible for transporting endogenous triglycerides?',options:['HDL','LDL','VLDL','Chylomicrons'],answer:2},
+  {q:'VLDL is mainly produced by which organ?',options:['Kidney','Liver','Heart','Pancreas'],answer:1},
+  {q:'Which lipoprotein is the precursor of LDL?',options:['HDL','Chylomicrons','VLDL','Albumin'],answer:2},
+  {q:'What is the intermediate-density lipoprotein (IDL) also called?',options:['HDL remnant','VLDL remnant','LDL precursor protein','Chylomicron receptor'],answer:1},
+  {q:'Approximately what percentage of IDL is converted to LDL?',options:['10%','25%','50%','100%'],answer:2},
+  {q:'Which apolipoprotein is the main protein component of LDL?',options:['Apo A-I','Apo B-100','Apo C-II','Apo E only'],answer:1},
+  {q:'Why is LDL cholesterol commonly called "bad cholesterol"?',options:['It prevents cholesterol absorption','It is directly related to coronary heart disease when abnormally elevated','It removes excess cholesterol from tissues','It inhibits all lipid metabolism'],answer:1},
+  {q:'Which lipoprotein is considered the major atherogenic lipoprotein?',options:['HDL','LDL','Chylomicrons','Albumin'],answer:1},
+  {q:'What is the main function of LDL receptors?',options:['Producing triglycerides','Controlling intracellular and intravascular cholesterol concentrations','Activating pancreatic enzymes','Producing HDL in the intestine'],answer:1},
+  {q:'Which lipoprotein is commonly known as "good cholesterol"?',options:['LDL','VLDL','HDL','IDL'],answer:2},
+  {q:'What is the main function of HDL?',options:['Transporting dietary triglycerides from the intestine','Returning excess cholesterol from peripheral tissues to the liver','Increasing cholesterol deposition in arteries','Producing bile acids directly in the blood'],answer:1},
+  {q:'Where is nascent HDL synthesized?',options:['Liver and small intestine','Kidneys only','Skeletal muscles only','Bone marrow only'],answer:0},
+  {q:'Which apolipoprotein is the primary structural protein of HDL?',options:['Apo B-100','Apo C-II','Apo A-I','Apo B-48'],answer:2},
+  {q:'Which enzyme is activated by Apo A-I and esterifies free cholesterol within HDL?',options:['Lipoprotein lipase (LPL)','Lecithin-cholesterol acyltransferase (LCAT)','Amylase','Lipase inhibitor'],answer:1},
+  {q:'Which transporter mediates the transfer of free cholesterol and phospholipids from peripheral macrophages to Apo A-I?',options:['ABCG5','ABCA1','LRP1','CETP'],answer:1},
+  {q:'Which receptor selectively recognizes HDL and facilitates the uptake of cholesteryl esters into liver cells?',options:['LDL receptor only','Scavenger receptor class A member 1','Scavenger receptor class B member 1 (SR-B1)','LRP1 only'],answer:2}
+ ],
+ 'nt_biochem_1': [
+  {q:'What is dyslipidemia?',options:['Decreased blood glucose levels','Abnormal blood lipid levels','Increased blood protein levels','Decreased blood calcium levels'],answer:1},
+  {q:'Hyperlipidemia is defined as:',options:['Increased plasma cholesterol or triglycerides, or both','Decreased plasma cholesterol only','Increased plasma glucose','Decreased plasma triglycerides only'],answer:0},
+  {q:'Primary hyperlipidemia is mainly caused by:',options:['Vitamin deficiency','Genetic defects affecting lipoprotein metabolism','Bacterial infections','Dehydration'],answer:1},
+  {q:'Which enzyme deficiency can cause primary hypertriglyceridemia?',options:['Lipoprotein lipase (LPL)','Amylase','Pepsin','Lactase'],answer:0},
+  {q:'Which apolipoprotein acts as a cofactor or activator of LPL?',options:['Apo A-I','Apo B','Apo C-II','Apo E'],answer:2},
+  {q:'In primary hypertriglyceridemia due to LPL deficiency, fasting triglyceride levels are usually:',options:['Less than 50 mg/dL','Less than 100 mg/dL','More than 1,000 mg/dL','Exactly 150 mg/dL'],answer:2},
+  {q:'Which of the following is a clinical feature of primary hypertriglyceridemia?',options:['Acute pancreatitis','Hypoglycemia','Iron deficiency anemia','Osteoporosis'],answer:0},
+  {q:'Familial hypercholesterolemia is inherited in which pattern?',options:['Autosomal recessive','Autosomal dominant','X-linked recessive','Mitochondrial inheritance'],answer:1},
+  {q:'Homozygous familial hypercholesterolemia is associated with total cholesterol levels of:',options:['Less than 100 mg/dL','100–150 mg/dL','200–250 mg/dL','More than 500 mg/dL'],answer:3},
+  {q:'In heterozygous familial hypercholesterolemia, total cholesterol is typically:',options:['50–100 mg/dL','100–150 mg/dL','250–500 mg/dL','More than 1,000 mg/dL'],answer:2},
+  {q:'The main cause of LDL elevation in familial hypercholesterolemia is:',options:['Increased HDL synthesis','Decreased or absent LDL receptors','Increased LPL activity','Decreased cholesterol synthesis'],answer:1},
+  {q:'Which physical finding is commonly associated with familial hypercholesterolemia?',options:['Tendinous xanthomas','Clubbing of fingers','Petechiae','Cyanosis'],answer:0},
+  {q:'Familial combined hyperlipidemia is characterized by:',options:['Decreased LDL and decreased triglycerides','Increased apo B production with increased VLDL and LDL','Increased HDL only','Decreased cholesterol absorption only'],answer:1},
+  {q:'Familial combined hyperlipidemia is also known as:',options:['Type I','Type IIa','Type IIb','Type V only'],answer:2},
+  {q:'Familial dysbetalipoproteinemia is associated with abnormalities in:',options:['Apo A-I','Apo B','Apo C-II','Apo E'],answer:3},
+  {q:'Which finding is particularly associated with familial dysbetalipoproteinemia?',options:['Yellow palmar creases','Blue sclera','Generalized edema only','Enlarged thyroid gland'],answer:0},
+  {q:'Polygenic hypercholesterolemia results from:',options:['A single bacterial infection','Multiple small genetic variations across many genes','Complete deficiency of Apo C-II only','Excessive insulin production'],answer:1},
+  {q:'Which lipid abnormality is commonly associated with poorly controlled type 2 diabetes mellitus?',options:['High triglycerides and low HDL-C','Low triglycerides and high HDL-C','Low LDL and low triglycerides in every patient','Increased HDL only'],answer:0},
+  {q:'What is the common dyslipidemia seen in chronic kidney disease (CKD)?',options:['Hypertriglyceridemia','Isolated low cholesterol','Isolated high HDL-C','Complete absence of LDL'],answer:0},
+  {q:'Hypothyroidism mainly causes which lipid abnormality?',options:['Decreased total cholesterol','Increased LDL cholesterol','Increased HDL cholesterol only','Decreased LDL and increased HDL'],answer:1},
+  {q:'Heavy alcohol abuse is associated primarily with:',options:['Hypertriglyceridemia','Hypocholesterolemia','Decreased triglycerides','Decreased VLDL production in every patient'],answer:0},
+  {q:'Which of the following medications may cause increased triglyceride and LDL cholesterol levels?',options:['Thiazides','Glucocorticoids','Beta blockers','All of the above'],answer:3},
+  {q:'According to the lecture, metabolic syndrome is diagnosed when at least how many listed features are present?',options:['One','Two','Three','Five'],answer:2},
+  {q:'According to the Friedewald formula, VLDL cholesterol is calculated as:',options:['Total cholesterol × 5','Total triglycerides ÷ 5','HDL cholesterol ÷ 5','LDL cholesterol × 5'],answer:1},
+  {q:'The Friedewald formula for calculating LDL-C is valid when triglyceride levels are:',options:['Less than 150 mg/dL only','Less than 200 mg/dL only','Less than 400 mg/dL','Greater than 500 mg/dL'],answer:2}
+ ],
+ 'nt_biochem_2': [
+  {q:'What is the leading cause of morbidity and mortality worldwide?',options:['Respiratory diseases','Cardiovascular diseases','Kidney diseases','Infectious diseases'],answer:1},
+  {q:'Which of the following is a traditional risk factor for cardiovascular disease?',options:['Dyslipidemia','Good hydration','Normal blood pressure','Regular physical activity'],answer:0},
+  {q:'Which of the following is considered bad cholesterol?',options:['HDL cholesterol','LDL cholesterol','Albumin','Hemoglobin'],answer:1},
+  {q:'High LDL cholesterol increases the risk of which condition?',options:['Osteoporosis','Atherosclerosis','Anemia','Hypoglycemia'],answer:1},
+  {q:'What is atherosclerosis?',options:['A reduction in blood glucose','Plaque buildup in the arteries','A decrease in blood pressure','A reduction in body fat'],answer:1},
+  {q:'Which lipoprotein has a protective effect against cardiovascular disease?',options:['LDL','HDL','Lipoprotein(a)','VLDL'],answer:1},
+  {q:'What is the main function of HDL cholesterol?',options:['Increase plaque formation','Transport cholesterol away from the arteries','Increase blood glucose','Promote cholesterol accumulation in arteries'],answer:1},
+  {q:'Low HDL cholesterol is associated with:',options:['Reduced cardiovascular risk','Increased cardiovascular risk','Complete prevention of atherosclerosis','Reduced risk of stroke in all cases'],answer:1},
+  {q:'High triglyceride levels, particularly as part of which condition, are associated with increased cardiovascular risk?',options:['Metabolic syndrome','Osteoarthritis','Anemia','Hypothyroidism only'],answer:0},
+  {q:'Lipoprotein(a) is structurally similar to:',options:['HDL','LDL','Albumin','Hemoglobin'],answer:1},
+  {q:'Which additional protein is attached to lipoprotein(a)?',options:['Apolipoprotein(a)','Insulin','Albumin','Fibrinogen'],answer:0},
+  {q:'Why does lipoprotein(a) increase cardiovascular risk?',options:['It prevents all cholesterol transport','Its extra protein makes the particle more likely to stick to arteries','It removes all arterial plaques','It decreases total cholesterol to zero'],answer:1},
+  {q:'Which of the following is a cardiovascular disease risk factor?',options:['Family history','Smoking','Diabetes mellitus','All of the above'],answer:3},
+  {q:'Which of the following is a traditional risk factor for cardiovascular disease?',options:['Hypertension','Normal HDL cholesterol','Regular exercise','Healthy dietary habits'],answer:0},
+  {q:'Why is regular cholesterol screening important?',options:['To detect high cholesterol early','To increase LDL cholesterol','To eliminate the need for exercise','To prevent all diseases'],answer:0},
+  {q:'Which of the following is an appropriate lifestyle modification for managing cholesterol?',options:['Smoking more frequently','Avoiding all physical activity','Improving diet and exercising','Increasing unhealthy fat intake'],answer:2},
+  {q:'Which of the following may be used to manage high cholesterol and reduce cardiovascular risk?',options:['Appropriate cholesterol-lowering medications','Smoking','Physical inactivity','Excessive unhealthy food intake'],answer:0},
+  {q:'How is the atherogenic index (total cholesterol/HDL-C ratio) calculated?',options:['HDL-C ÷ total cholesterol','Total cholesterol ÷ HDL-C','LDL-C ÷ triglycerides','Total cholesterol × HDL-C'],answer:1},
+  {q:'A patient has a total cholesterol level of 200 mg/dL and an HDL-C level of 50 mg/dL. What is the atherogenic index?',options:['2','3','4','5'],answer:2,explanation:'Atherogenic index = total cholesterol ÷ HDL-C = 200 ÷ 50 = 4.'},
+  {q:'According to the lecture, a normal total cholesterol/HDL-C ratio is generally:',options:['Below 5:1','Above 10:1','Exactly 10:1','Above 15:1'],answer:0},
+  {q:'According to the lecture, a total cholesterol/HDL-C ratio of 3.5 or lower is considered:',options:['Very good','Very poor','Always abnormal','Diagnostic of diabetes'],answer:0},
+  {q:'A high atherogenic index generally indicates:',options:['Lower cardiovascular risk','Higher cardiovascular risk','Complete protection against atherosclerosis','No relationship to cardiovascular disease'],answer:1},
+  {q:'What is one clinical benefit of calculating the atherogenic index?',options:['It provides an integrated assessment of the lipid profile','It directly measures blood pressure','It measures blood glucose','It replaces every cardiovascular investigation'],answer:0},
+  {q:'A patient has total cholesterol of 220 mg/dL and HDL-C of 55 mg/dL. What is the atherogenic index?',options:['2','3','4','5'],answer:2,explanation:'Atherogenic index = 220 ÷ 55 = 4. According to the lecture, this is below 5:1 and generally within the normal range.'},
+  {q:'How can the atherogenic index help patients?',options:['It can improve risk communication and motivate lifestyle changes','It eliminates the need for cholesterol screening','It guarantees that cardiovascular disease will not develop','It increases LDL cholesterol to protective levels'],answer:0}
+ ],
+ 'nt_biochem_3': [
+  {q:'Which of the following is a characteristic of fat-soluble vitamins?',options:['They are readily excreted in urine.','They cannot be stored in the body.','They can be stored in the liver and fatty tissues.','They are absorbed directly into the blood without lymph.'],answer:2},
+  {q:'Which of the following is a fat-soluble vitamin?',options:['Vitamin B1','Vitamin C','Vitamin B12','Vitamin A'],answer:3},
+  {q:'Which of the following is the storage form of vitamin A?',options:['Retinal','Retinol','Retinoic acid','Beta-carotene'],answer:1},
+  {q:'Which protein transports retinol from the liver to extrahepatic tissues?',options:['Albumin','Hemoglobin','Retinol-binding protein (RBP)','Transferrin'],answer:2},
+  {q:'Which of the following is a plant source of vitamin A precursors?',options:['Liver','Kidney','Egg yolk','Carrots'],answer:3},
+  {q:'What is the earliest sign of vitamin A deficiency mentioned in the lecture?',options:['Night blindness','Loss of sensitivity to green light','Hemolytic anemia','Rickets'],answer:1},
+  {q:'Prolonged vitamin A deficiency may cause which condition?',options:['Xerophthalmia','Osteomalacia','Hemolytic anemia','Scurvy'],answer:0},
+  {q:'Which visual pigment is involved in the visual cycle?',options:['Hemoglobin','Myoglobin','Rhodopsin','Melanin'],answer:2},
+  {q:'Which form of vitamin A is associated with gene expression and epithelial tissue differentiation?',options:['Retinoic acid','Retinol only','Vitamin D','Vitamin K'],answer:0},
+  {q:'Excessive intake of vitamin A may cause which complication?',options:['Rickets','Teratogenesis','Scurvy','Pellagra'],answer:1},
+  {q:'Vitamin D is also known as the:',options:['Antisterility vitamin','Antiscorbutic vitamin','Solar vitamin','Antibleeding vitamin'],answer:2},
+  {q:'Which substance in human skin is converted into vitamin D3 following exposure to ultraviolet light?',options:['Cholesterol-binding protein','7-Dehydrocholesterol','Retinol','Beta-carotene'],answer:1},
+  {q:'What is the active form of vitamin D?',options:['Ergocalciferol','Cholecalciferol','Calcidiol','Calcitriol'],answer:3},
+  {q:'Which of the following is a function of vitamin D?',options:['Decreasing intestinal calcium absorption','Increasing intestinal calcium absorption','Preventing all blood coagulation','Transporting oxygen in the blood'],answer:1},
+  {q:'Vitamin D helps maintain plasma calcium levels by:',options:['Increasing calcium excretion by the kidneys','Decreasing calcium absorption from the intestine','Stimulating renal calcium reabsorption','Preventing calcium absorption completely'],answer:2},
+  {q:'Vitamin D deficiency in children causes:',options:['Osteomalacia','Rickets','Xerophthalmia','Hemolytic anemia'],answer:1},
+  {q:'Vitamin D deficiency in adults commonly causes:',options:['Osteomalacia','Night blindness','Scurvy','Beriberi'],answer:0},
+  {q:'What is the main characteristic of osteomalacia?',options:['Failure of blood coagulation','Softening of bones due to defective mineralization','Increased visual sensitivity','Excessive red blood cell production'],answer:1},
+  {q:'Excessive vitamin D intake can cause:',options:['Hypocalcemia','Hypercalcemia','Vitamin C deficiency','Decreased calcium absorption'],answer:1},
+  {q:'Which form of vitamin E is the most active?',options:['Alpha-tocopherol','Retinol','Phylloquinone','Ergocalciferol'],answer:0},
+  {q:'What is the main function of vitamin E?',options:['Promoting blood coagulation','Acting as an antioxidant','Increasing calcium excretion','Forming rhodopsin directly'],answer:1},
+  {q:'Vitamin E deficiency may result in:',options:['Hemolytic anemia','Rickets','Scurvy','Night blindness'],answer:0},
+  {q:'Which of the following is a major dietary source of vitamin E?',options:['Vegetable oils','Refined sugar','White salt','Water'],answer:0},
+  {q:'What is the primary function of vitamin K?',options:['Calcium absorption from the intestine','Formation of visual pigments','Activation of blood coagulation factors','Antioxidant protection of cell membranes'],answer:2},
+  {q:'Which coagulation factors require vitamin K for activation?',options:['Factors I, III, V and VIII','Factors II, VII, IX and X','Factors V, VIII, XI and XII','Factors I, V, VIII and XIII'],answer:1}
+ ],
+ 'nt_biochem_4': [
+  {q:'Which vitamin is known as thiamine?',options:['Vitamin B1','Vitamin B2','Vitamin B3','Vitamin B5'],answer:0},
+  {q:'Which enzyme requires thiamine as a coenzyme to convert pyruvate to acetyl-CoA?',options:['Lactate dehydrogenase','Pyruvate dehydrogenase','Hexokinase','Succinate dehydrogenase'],answer:1},
+  {q:'Thiamine is required for which reaction?',options:['Protein digestion','Oxidative decarboxylation','DNA replication only','Fat absorption'],answer:1},
+  {q:'Which enzyme uses thiamine pyrophosphate (TPP) in the pentose phosphate pathway?',options:['Transketolase','Amylase','Lipase','Pepsin'],answer:0},
+  {q:'Thiamine deficiency causes which disease?',options:['Pellagra','Scurvy','Beriberi','Rickets'],answer:2},
+  {q:'Which form of beriberi primarily affects the nervous system?',options:['Wet beriberi','Dry beriberi','Acute beriberi only','Cardiovascular beriberi'],answer:1},
+  {q:'Which of the following is a characteristic of wet beriberi?',options:['Muscle wasting only','Peripheral neuropathy only','Heart failure and edema','Night blindness'],answer:2},
+  {q:'Wernicke-Korsakoff syndrome is associated with a deficiency of:',options:['Vitamin B1','Vitamin B2','Vitamin B3','Vitamin B5'],answer:0},
+  {q:'Which vitamin is also known as riboflavin?',options:['Vitamin B1','Vitamin B2','Vitamin B3','Vitamin B6'],answer:1},
+  {q:'What is the deficiency disease associated with vitamin B2?',options:['Beriberi','Pellagra','Ariboflavinosis','Scurvy'],answer:2},
+  {q:'Which coenzymes are derived from riboflavin?',options:['NAD and NADP','FMN and FAD','CoA and TPP','ATP and ADP'],answer:1},
+  {q:'What is one major function of vitamin B2?',options:['Acting as a coenzyme in oxidation-reduction reactions','Directly storing genetic information','Forming bile salts only','Preventing all infections'],answer:0},
+  {q:'Which of the following is a possible cause of riboflavin deficiency?',options:['Excessive vitamin C intake','Malabsorption disorders','Excessive water intake','High calcium intake only'],answer:1},
+  {q:'Vitamin B3 is also known as:',options:['Thiamine','Riboflavin','Niacin','Pantothenic acid'],answer:2},
+  {q:'Which coenzymes are derived from niacin?',options:['FMN and FAD','NAD and NADP','TPP and CoA','ATP and GTP'],answer:1},
+  {q:'NAD functions primarily as a:',options:['Hydrogen and electron carrier','Structural component of bones','Digestive enzyme','Hormone'],answer:0},
+  {q:'Severe deficiency of vitamin B3 causes:',options:['Beriberi','Pellagra','Ariboflavinosis','Osteomalacia'],answer:1},
+  {q:'Which of the following is NOT one of the four Ds of pellagra?',options:['Dermatitis','Diarrhea','Dementia','Deafness'],answer:3},
+  {q:'Which skin condition is associated with pellagra?',options:['Dermatitis','Vitiligo','Cyanosis','Jaundice'],answer:0},
+  {q:'Which amino acid serves as a precursor for niacin synthesis?',options:['Glycine','Tryptophan','Alanine','Methionine'],answer:1},
+  {q:'Excessive intake of which amino acid can contribute to niacin deficiency?',options:['Leucine','Lysine','Glycine','Glutamine'],answer:0},
+  {q:'Which drug can contribute to niacin deficiency by interfering with tryptophan metabolism?',options:['Paracetamol','Isoniazid','Ibuprofen','Amoxicillin'],answer:1},
+  {q:'Hartnup disease can cause niacin deficiency because it impairs the absorption and reabsorption of:',options:['Tyrosine','Tryptophan','Glycine','Cysteine'],answer:1},
+  {q:'Vitamin B5 is also known as:',options:['Pantothenic acid','Folic acid','Biotin','Niacin'],answer:0},
+  {q:'What is the primary function of coenzyme A, which contains vitamin B5?',options:['Carrying acyl groups in enzymatic reactions','Carrying oxygen in red blood cells','Producing antibodies directly','Storing calcium in bones'],answer:0}
+ ],
+ 'nt_biochem_5': [
+  {q:'What is the active form of vitamin B6?',options:['Thiamine pyrophosphate','Pyridoxal phosphate (PLP)','Tetrahydrofolate (THF)','Methylcobalamin'],answer:1},
+  {q:'Vitamin B6 requirements are expressed in terms of dietary protein intake because PLP is mainly involved in:',options:['Fat absorption','Amino acid metabolism','Calcium absorption','Vitamin D synthesis'],answer:1},
+  {q:'Pyridoxal phosphate (PLP) acts as a coenzyme for which enzymes?',options:['ALT and AST','Amylase and lipase','Pepsin and trypsin','Lactase and maltase'],answer:0},
+  {q:'Which amino acid conversion requires PLP according to the lecture?',options:['Homocysteine to cysteine','Glucose to glycogen','Cholesterol to bile salts','Lactose to glucose'],answer:0},
+  {q:'Which of the following can occur due to vitamin B6 deficiency?',options:['Microcytic hypochromic anemia','Night blindness','Rickets','Scurvy'],answer:0},
+  {q:'PLP acts as a coenzyme for which enzyme involved in carbohydrate metabolism?',options:['Glycogen phosphorylase','Hexokinase only','Lactase','Pepsin'],answer:0},
+  {q:'What is the primary coenzyme function of biotin?',options:['Transfer of amino groups','Transfer of carbon dioxide in carboxylation reactions','Transfer of oxygen','Breakdown of hemoglobin'],answer:1},
+  {q:'Which enzyme converts pyruvate into oxaloacetate?',options:['Pyruvate carboxylase','Acetyl-CoA carboxylase','ALT','Glycogen phosphorylase'],answer:0},
+  {q:'Which enzyme catalyzes the conversion of acetyl-CoA into malonyl-CoA?',options:['Pyruvate carboxylase','Acetyl-CoA carboxylase','AST','Propionyl-CoA carboxylase'],answer:1},
+  {q:'Why can consuming raw eggs cause biotin deficiency?',options:['Raw eggs destroy intestinal bacteria completely.','Avidin binds to biotin and prevents its absorption.','Raw eggs prevent vitamin B7 synthesis in the liver.','Egg proteins increase biotin excretion.'],answer:1},
+  {q:'Which of the following may cause biotin deficiency?',options:['Prolonged antibiotic use','Excessive sunlight exposure','Increased vitamin C intake','Increased water consumption'],answer:0},
+  {q:'What is the active form of folic acid?',options:['Pyridoxal phosphate','Tetrahydrofolate (THF)','Ascorbic acid','Adenosylcobalamin'],answer:1},
+  {q:'Tetrahydrofolate (THF) participates in reactions involving the transfer of:',options:['One-carbon units','Calcium ions','Fatty acid chains only','Oxygen molecules only'],answer:0},
+  {q:'Folate is important for the synthesis of:',options:['Purines and nucleotides','Bile pigments only','Digestive enzymes only','Triglycerides only'],answer:0},
+  {q:'Which of the following increases the body\'s demand for folate?',options:['Pregnancy and lactation','Sleeping','Reduced physical activity','Drinking more water'],answer:0},
+  {q:'Which anticancer drug can cause folate deficiency by inhibiting dihydrofolate reductase?',options:['Methotrexate','Paracetamol','Aspirin','Ibuprofen'],answer:0},
+  {q:'Which antibacterial drug is associated with impaired folate metabolism in the lecture?',options:['Trimethoprim','Amoxicillin','Tetracycline','Azithromycin'],answer:0},
+  {q:'Which mineral ion is present in the structure of vitamin B12?',options:['Iron','Zinc','Cobalt','Magnesium'],answer:2},
+  {q:'Which active form of vitamin B12 is involved in converting homocysteine into methionine?',options:['Pyridoxal phosphate','Methylcobalamin','Adenosylcobalamin','Tetrahydrofolate'],answer:1},
+  {q:'Which form of vitamin B12 is involved in the conversion of certain amino acids and odd-chain fatty acids into succinyl-CoA?',options:['Methylcobalamin','Adenosylcobalamin','Ascorbic acid','Biotin'],answer:1},
+  {q:'Pernicious anemia commonly results from a lack of:',options:['Intrinsic factor','Vitamin C','Biotin','Pyridoxal phosphate'],answer:0},
+  {q:'Which cells produce intrinsic factor?',options:['Gastric parietal cells','Red blood cells','Pancreatic beta cells','Intestinal goblet cells'],answer:0},
+  {q:'The vitamin B12–intrinsic factor complex is absorbed mainly in which part of the intestine?',options:['Stomach','Duodenum','Ileum','Colon'],answer:2},
+  {q:'Which of the following is a major function of vitamin C?',options:['Facilitating non-heme iron absorption','Inhibiting collagen synthesis','Preventing all amino acid metabolism','Blocking antioxidant activity'],answer:0},
+  {q:'Severe vitamin C deficiency causes which disease?',options:['Pellagra','Scurvy','Beriberi','Pernicious anemia'],answer:1}
+ ],
+ 'nt_medicine_0': [
+  {q:'What is the definition of hypovolemia?',options:['An increase in total body water','An increase in intracellular fluid','A reduction in circulating blood volume','An increase in sodium concentration'],answer:2},
+  {q:'Hypovolemia occurs when more than what percentage of intravascular fluid is lost?',options:['5%','10%','50%','15%'],answer:3},
+  {q:'Which of the following is a common gastrointestinal cause of hypovolemia?',options:['Constipation','Diarrhea','Gastritis','Dysphagia'],answer:1},
+  {q:'Which of the following can cause hypovolemia by decreasing fluid intake?',options:['Water deprivation','Excessive sweating','Internal bleeding','Burns'],answer:0},
+  {q:'Which hormone increases water reabsorption during hypovolemia?',options:['Insulin','Glucagon','Thyroxine','Antidiuretic hormone (ADH)'],answer:3},
+  {q:'Which of the following is a physiological response to hypovolemia?',options:['Bradycardia','Reduced water reabsorption','Sympathetic activation','Increased sodium loss'],answer:2},
+  {q:'Which of the following is a clinical sign of hypovolemia?',options:['Hypertension','Tachycardia','Increased urine output','Increased skin turgor'],answer:1},
+  {q:'Which urinary finding is commonly associated with hypovolemia?',options:['Increased urine output','Increased sodium excretion','Increased urine sodium','Reduced urine output'],answer:3},
+  {q:'Which laboratory finding is commonly associated with hypovolemia?',options:['Increased blood urea concentration','Decreased blood urea concentration','Always increased serum sodium','Always decreased serum potassium'],answer:0},
+  {q:'Which of the following can cause increased renal water loss?',options:['Water deprivation','Dysphagia','Diabetes insipidus','Reduced fluid availability'],answer:2},
+  {q:'Which fluid is generally preferred for resuscitation in acute hypovolemia?',options:['Colloids in all cases','Hypertonic saline in all cases','Oral fluids only','Crystalloids'],answer:3},
+  {q:'Which of the following is a potential complication of hypovolemia due to organ hypoperfusion?',options:['Increased tissue perfusion','Shock','Increased urine output','Fluid overload as the direct consequence of untreated hypovolemia'],answer:1},
+  {q:'What is the typical daily water requirement per kilogram of body weight according to the lecture?',options:['5–10 mL/kg','15–20 mL/kg','35–45 mL/kg','60–80 mL/kg'],answer:2},
+  {q:'What is hypervolemia?',options:['A reduction in circulating blood volume','A loss of sodium without water','A reduction in extracellular fluid','An isotonic water excess in the body'],answer:3},
+  {q:'In typical hypervolemia, which substances are proportionally retained?',options:['Water and sodium','Potassium and calcium','Protein and potassium','Calcium and magnesium'],answer:0},
+  {q:'Hypervolemia is rare in people with normal cardiac and renal function because:',options:['The kidneys cannot excrete sodium','The heart prevents water absorption','The kidneys can increase sodium and water excretion','Sodium cannot enter the extracellular fluid'],answer:2},
+  {q:'Which of the following is a cause of hypervolemia?',options:['Severe dehydration','Excessive sweating','Water deprivation','Renal insufficiency'],answer:3},
+  {q:'Which condition can cause secondary hyperaldosteronism and be associated with interstitial edema?',options:['Diabetes insipidus','Congestive heart failure','Water deprivation','Excessive sweating'],answer:1},
+  {q:'Which of the following is a symptom of hypervolemia?',options:['Weight loss','Dry mouth only','Dyspnea','Reduced body weight'],answer:2},
+  {q:'Which of the following is a clinical feature of interstitial fluid expansion?',options:['Crackles in the lungs','Reduced skin edema','Reduced jugular venous pressure in all cases','Increased skin turgor without edema'],answer:0},
+  {q:'What is the usual serum sodium concentration in isotonic hypervolemia?',options:['Always markedly increased','Always markedly decreased','Always zero','Usually normal'],answer:3},
+  {q:'Which investigation can help assess cardiac causes of hypervolemia?',options:['Urine sodium only','Echocardiography','Skin turgor assessment only','Blood glucose only'],answer:1},
+  {q:'Which of the following is a treatment for hypervolemia?',options:['Increasing dietary sodium','Increasing water intake in all cases','Fluid restriction','Avoiding all medications'],answer:2},
+  {q:'Which diuretic group is potent and may cause hypokalemia and metabolic alkalosis?',options:['Loop diuretics','Potassium-sparing diuretics','Aldosterone agonists','Antidiuretic drugs'],answer:0},
+  {q:'Which electrolyte disturbance is a potential adverse effect of potassium-sparing diuretics?',options:['Hypercalcemia','Hypokalemia in all cases','Hypernatremia in all cases','Hyperkalemia'],answer:3}
+ ],
+ 'nt_medicine_1': [
+  {q:'What is the normal serum sodium concentration?',options:['125–130 mmol/L','130–135 mmol/L','135–145 mmol/L','145–155 mmol/L'],answer:2},
+  {q:'Hyponatremia is defined as serum sodium concentration:',options:['Below 135 mmol/L','Above 145 mmol/L','Above 150 mmol/L','Below 145 mmol/L'],answer:0},
+  {q:'Hypernatremia is defined as serum sodium concentration:',options:['Below 125 mmol/L','125–129 mmol/L','130–135 mmol/L','Above 145 mmol/L'],answer:3},
+  {q:'What is the normal plasma osmolarity according to the lecture?',options:['200–250 mmol/L','280–295 mmol/L','300–350 mmol/L','350–400 mmol/L'],answer:1},
+  {q:'What happens to cells in extracellular hypo-osmolarity?',options:['Cells shrink','Cells lose potassium only','Cells swell','Cells remain unchanged'],answer:2},
+  {q:'Which organ is most sensitive to changes in osmolarity?',options:['Liver','Kidney','Heart','Brain'],answer:3},
+  {q:'Acute hyponatremia develops within:',options:['48 hours','5 days','7 days','2 weeks'],answer:0},
+  {q:'Which serum sodium concentration indicates severe hyponatremia?',options:['130–135 mmol/L','125–129 mmol/L','Below 125 mmol/L','135–145 mmol/L'],answer:2},
+  {q:'Which of the following is a cause of hypovolemic hyponatremia?',options:['Heart failure','Liver disease','Primary polydipsia','Diuretic use, especially thiazides'],answer:3},
+  {q:'Which condition is associated with hypervolemic hyponatremia?',options:['Vomiting','Heart failure','Excessive sweating','Primary polydipsia'],answer:1},
+  {q:'Which of the following can cause euvolemic hyponatremia?',options:['Severe sweating','Diarrhea','Syndrome of inappropriate antidiuretic hormone secretion (SIADH)','Excessive renal sodium loss'],answer:2},
+  {q:'Antidiuretic hormone (ADH) is also known as:',options:['Aldosterone','Insulin','Renin','Vasopressin'],answer:3},
+  {q:'ADH increases water reabsorption mainly by acting on the:',options:['Collecting ducts','Glomerulus','Ascending loop of Henle','Proximal tubules only'],answer:0},
+  {q:'Which of the following is a possible cause of SIADH?',options:['Excessive sweating','Pneumonia','Diarrhea','Thiazide-induced sodium loss only'],answer:1},
+  {q:'Which urine sodium concentration supports the diagnosis of SIADH in the lecture?',options:['Less than 5 mmol/L','Less than 10 mmol/L','Greater than 30 mmol/L','Exactly 15 mmol/L'],answer:2},
+  {q:'Which symptom may occur in severe hyponatremia?',options:['Increased appetite only','Improved alertness','Increased muscle strength','Seizures'],answer:3},
+  {q:'What is the recommended maximum correction of chronic asymptomatic hyponatremia stated in the lecture?',options:['10 mmol/L per 24 hours','20 mmol/L per 24 hours','25 mmol/L per 24 hours','30 mmol/L per 24 hours'],answer:0},
+  {q:'Which treatment is used for hypovolemic hyponatremia?',options:['Fluid restriction alone in every case','Intravenous saline','Oral water loading','No treatment is required'],answer:1},
+  {q:'What is a treatment approach for euvolemic hyponatremia due to SIADH?',options:['Unlimited water intake','Routine sodium-free IV fluids','Fluid restriction','Increased water retention'],answer:2},
+  {q:'Which of the following can cause hypovolemic hypernatremia?',options:['Heart failure','Primary polydipsia','SIADH','Excessive sweating'],answer:3},
+  {q:'Central diabetes insipidus may result from:',options:['Pituitary damage','Heart failure','Liver disease','Excessive ADH secretion'],answer:0},
+  {q:'Nephrogenic diabetes insipidus occurs when:',options:['The body produces excessive insulin','Collecting duct cells are resistant to vasopressin','The kidneys retain excessive water because of SIADH','Sodium concentration falls below 135 mmol/L'],answer:1},
+  {q:'Hypernatremia causes brain cells to:',options:['Swell because water enters the cells','Remain unchanged','Shrink because water leaves the cells','Increase their intracellular water content'],answer:2},
+  {q:'Which fluid is mentioned in the lecture for correcting hypernatremia?',options:['Concentrated sodium chloride only','Undiluted potassium chloride','Hypertonic saline in every case','5% dextrose or 0.45% saline'],answer:3},
+  {q:'Which marker can help distinguish central from nephrogenic diabetes insipidus?',options:['Copeptin','Serum albumin','Hemoglobin','Serum cholesterol'],answer:0}
+ ],
+ 'nt_medicine_2': [
+  {q:'How is obesity defined?',options:['Abnormal or excessive fat accumulation that presents a risk to health','Decreased body fat associated with malnutrition','Increased muscle mass','Abnormal loss of body weight'],answer:0},
+  {q:'According to the lecture, a BMI above which value is classified as obesity?',options:['18.5 kg/m²','25 kg/m²','30 kg/m²','20 kg/m²'],answer:2},
+  {q:'Which of the following is a major complication of obesity?',options:['Hypotension in all patients','Reduced risk of diabetes','Decreased cardiovascular risk','Cardiovascular disease'],answer:3},
+  {q:'Which type of fat distribution is commonly described as apple-shaped obesity?',options:['Gynoid obesity','Android obesity','Generalized subcutaneous obesity','Peripheral obesity'],answer:1},
+  {q:'Android obesity is more commonly seen in which group?',options:['Men','Children only','Women only','Newborns'],answer:0},
+  {q:'What is the recommended waist-to-height ratio threshold mentioned in the lecture?',options:['0.2','0.3','0.5','0.8'],answer:2},
+  {q:'Obesity generally results from which of the following?',options:['Reduced energy intake with increased expenditure','Increased energy expenditure alone','Reduced fat storage','A positive energy balance'],answer:3},
+  {q:'What is the increase in the number of adipocytes called?',options:['Hypertrophy','Hyperplasia','Atrophy','Lipolysis'],answer:1},
+  {q:'What is the increase in the size of existing fat cells called?',options:['Hypertrophy','Hyperplasia','Apoptosis','Atrophy'],answer:0},
+  {q:'Susceptibility to obesity is influenced by which factors?',options:['Genetics alone','Environment alone','Both genetics and environment','Blood group alone'],answer:2},
+  {q:'Mutation of which receptor accounts for approximately 5% of severe early-onset obesity, according to the lecture?',options:['Insulin receptor','Leptin receptor only','Thyroid hormone receptor','Melanocortin-4 receptor (MC4R)'],answer:3},
+  {q:'Which genetic defect can be treated with leptin injections?',options:['MC4R mutation in every case','Leptin gene mutation','Insulin gene mutation','Thyroxine deficiency'],answer:1},
+  {q:'Which of the following is a genetic syndrome associated with obesity?',options:['Prader–Willi syndrome','Turner syndrome only','Marfan syndrome','Down syndrome only'],answer:0},
+  {q:'What is one of the main aims when assessing a patient with obesity?',options:['To prescribe surgery to every patient','To avoid investigating complications','To exclude an underlying cause','To discontinue all medications'],answer:2},
+  {q:'Which investigation is recommended for all obese patients according to the lecture?',options:['Brain MRI','Thyroid function tests (TFTs)','Bone marrow biopsy','Cardiac catheterization'],answer:1},
+  {q:'Which test can help detect type 2 diabetes in patients with obesity?',options:['Serum calcium','Serum bilirubin','Serum amylase','HbA1c'],answer:3},
+  {q:'What amount of weight loss is considered an effective modest reduction that improves cardiometabolic risk factors?',options:['5–10 kg','1–2 kg','20–30 kg in every patient','0.5 kg only'],answer:0},
+  {q:'What is the cornerstone of long-term weight control?',options:['Diuretic therapy','Thyroxine treatment','Behavioural modification and lifestyle changes','Avoiding all physical activity'],answer:2},
+  {q:'Very-low-energy diets (VLEDs) provide how many calories per day?',options:['1,500–2,000 kcal','Less than 800 kcal','2,000–2,500 kcal','More than 3,000 kcal'],answer:1},
+  {q:'What is the mechanism of action of orlistat?',options:['It increases appetite','It stimulates fat absorption','It increases thyroid hormone production','It inhibits pancreatic and gastric lipases'],answer:3},
+  {q:'Which of the following is a common adverse effect of orlistat?',options:['Loose, oily stools','Severe hair growth','Increased fat absorption','Persistent hypertension in all patients'],answer:0},
+  {q:'Which medication class is described in the lecture as among the most effective for obesity treatment?',options:['Diuretics','Thyroxine preparations','GLP-1 receptor agonists','Antibiotics'],answer:2},
+  {q:'What is the main mechanism by which liraglutide helps with weight loss?',options:['Increasing appetite','Reducing appetite and food intake','Increasing dietary fat absorption','Increasing fluid retention'],answer:1},
+  {q:'Bariatric surgery is usually reserved for patients with severe obesity, particularly those with a BMI above:',options:['20 kg/m²','25 kg/m²','30 kg/m² in every case','40 kg/m²'],answer:3},
+  {q:'Which of the following is a recognized complication of bariatric surgery?',options:['Micronutrient deficiencies, including vitamin B12, folate, and iron','Improved absorption of every micronutrient','Elimination of all gastrointestinal complications','Permanent prevention of hypoglycemia'],answer:0}
+ ],
+ 'nt_medicine_3': [
+  {q:'What BMI is considered underweight in adults?',options:['Below 18.5 kg/m²','Below 25 kg/m²','Above 30 kg/m²','Above 35 kg/m²'],answer:0},
+  {q:'Which of the following is a macronutrient?',options:['Vitamin C','Iron','Protein','Zinc'],answer:2},
+  {q:'Which of the following is classified as a micronutrient?',options:['Carbohydrates','Fat','Protein','Vitamins'],answer:3},
+  {q:'What percentage of total energy expenditure is accounted for by basal metabolic rate (BMR)?',options:['5–10%','15–30%','60–75%','80–95%'],answer:2},
+  {q:'Which of the following is a cause of malnutrition?',options:['Adequate food intake','Regular exercise alone','Normal intestinal absorption','Celiac disease'],answer:3},
+  {q:'Which hormonal change occurs early during starvation?',options:['Increased insulin and decreased glucagon','Decreased insulin and increased glucagon','Increased insulin and increased glucagon','Decreased insulin and decreased glucagon'],answer:1},
+  {q:'Which process helps maintain blood glucose during starvation?',options:['Glycogenesis','Lipogenesis','Hepatic gluconeogenesis','Increased insulin secretion'],answer:2},
+  {q:'Which substances are produced when fatty acids are converted into ketone bodies during starvation?',options:['Ketone bodies','Glycogen','Insulin','Albumin'],answer:0},
+  {q:'What happens to protein during advanced starvation?',options:['Protein synthesis increases greatly','Protein breakdown stops','Protein stores remain unchanged','Protein breakdown increases, causing wasting'],answer:3},
+  {q:'Which gastrointestinal change can occur in malnutrition?',options:['Increased intestinal villous growth','Villous atrophy of the small intestinal mucosa','Increased nutrient absorption','Increased pancreatic secretion in all cases'],answer:1},
+  {q:'Which cardiovascular change occurs in severe malnutrition?',options:['Increased myocardial mass','Increased cardiac function','Decreased myocardial mass and function','Increased blood volume in all cases'],answer:2},
+  {q:'Which immune abnormality is associated with malnutrition?',options:['Decreased total lymphocyte count','Increased antibody production','Increased immune response','Increased resistance to infection'],answer:0},
+  {q:'Which respiratory change may occur in severe malnutrition?',options:['Increased vital capacity','Increased inspiratory capacity','Increased respiratory muscle mass','Decreased inspiratory and vital capacity'],answer:3},
+  {q:'Which of the following is a clinical feature of malnutrition?',options:['Increased subcutaneous fat','Muscle wasting','Excessive weight gain','Increased muscle mass'],answer:1},
+  {q:'Which cardiovascular sign may occur in advanced starvation?',options:['Persistent tachycardia','Increased cardiac output','Bradycardia','Hypertension in every patient'],answer:2},
+  {q:'Which laboratory finding may be seen during starvation?',options:['Increased free fatty acids (FFA)','Increased insulin secretion','Severe hyperglycemia in every case','Increased plasma glucose in every case'],answer:0},
+  {q:'Which treatment is recommended before feeding begins in severely malnourished patients?',options:['High-dose glucose without monitoring','Rapid administration of a large meal','Salt loading','Intravenous thiamine'],answer:3},
+  {q:'How should feeding initially be given to severely malnourished patients?',options:['In one large meal daily','In small, frequent amounts','Only after complete weight recovery','As a rapid, unrestricted calorie load'],answer:1},
+  {q:'Why should rapid refeeding be avoided in severely malnourished patients?',options:['It always causes hypoglycemia','It prevents weight gain','It can lead to complications, including fatty liver','It increases protein absorption too slowly'],answer:2},
+  {q:'Which formula is listed in the lecture as containing 80 g of milk powder and 50 g of sugar?',options:['F-100','F-75','Oral rehydration solution','Standard saline solution'],answer:0},
+  {q:'When is enteral feeding indicated?',options:['When intestinal function is absent','When the patient has an ileus','When there is a contraindication to enteral feeding','When nutritional support is needed and the gut is functioning'],answer:3},
+  {q:'Which of the following is a gastrointestinal complication of enteral feeding?',options:['Venous thrombosis','Diarrhea','Catheter occlusion','Cholestatic jaundice'],answer:1},
+  {q:'Which patient may benefit from parenteral nutrition?',options:['A patient with normal gut function who can eat adequately','A patient who requires no nutritional support','A patient with abnormal gut function who cannot receive adequate enteral nutrition','A patient with adequate oral intake and no nutritional problems'],answer:2},
+  {q:'Which of the following is a mechanical complication of total parenteral nutrition (TPN)?',options:['Venous thrombosis','Hypoglycemia','Hepatic steatosis','Hypophosphatemia'],answer:0},
+  {q:'Which electrolyte abnormalities are characteristic of refeeding syndrome?',options:['Hyperkalemia, hypermagnesemia, and hyperphosphatemia','Hypernatremia, hypercalcemia, and hyperkalemia','Hypermagnesemia and hyperphosphatemia only','Hypomagnesemia, hypokalemia, and hypophosphatemia'],answer:3}
+ ],
+ 'nt_medicine_4': [
+  {q:'What is Wilson’s disease?',options:['Autosomal dominant iron overload','Autosomal recessive disorder of copper metabolism','X-linked disorder of calcium transport','Autoimmune destruction of bile ducts'],answer:1},
+  {q:'Which gene is mutated in Wilson’s disease?',options:['HFE gene','ATP7B gene','CFTR gene','ApoE gene'],answer:1},
+  {q:'What is the main function of the ATP7B protein?',options:['Iron absorption in duodenum','Transports copper into bile and ceruloplasmin','Zinc excretion in kidneys','Sodium-potassium pump regulation'],answer:1},
+  {q:'Which organ is the primary site of initial copper accumulation in Wilson’s disease?',options:['Brain','Kidney','Liver','Heart'],answer:2},
+  {q:'What is the pathognomonic ocular sign of Wilson’s disease?',options:['Bitot’s spots','Kayser-Fleischer (K-F) rings','Roth spots','Argyll Robertson pupil'],answer:1},
+  {q:'In which corneal layer is copper deposited to form Kayser-Fleischer rings?',options:['Epithelium','Descemet’s membrane','Stroma','Endothelium'],answer:1},
+  {q:'Which neurological symptom is commonly seen in Wilson’s disease?',options:['Flaccid paralysis','Parkinsonian-like tremor and dystonia','Loss of vibration sense','Bilateral ptosis'],answer:1},
+  {q:'Which classic laboratory finding supports the diagnosis of Wilson’s disease?',options:['High serum ceruloplasmin','Low serum ceruloplasmin','Elevated serum iron','Low urine copper'],answer:1},
+  {q:'How is 24-hour urinary copper excretion affected in untreated Wilson’s disease?',options:['Markedly decreased','Markedly increased (>100 µg/24h)','Completely absent','Normal in all patients'],answer:1},
+  {q:'What is considered the gold standard for definitive diagnosis of Wilson’s disease?',options:['Brain MRI','Liver biopsy for quantitative copper content','Slit-lamp examination alone','Serum bilirubin'],answer:1},
+  {q:'Which medication is a copper chelating agent used in Wilson’s disease?',options:['Penicillamine','Deferoxamine','Spironolactone','Liraglutide'],answer:0},
+  {q:'What is the mechanism of action of zinc therapy in Wilson’s disease?',options:['Chelates copper in blood','Blocks intestinal copper absorption by inducing metallothionein','Increases renal excretion of copper','Stimulates ATP7B activity'],answer:1},
+  {q:'Which hematological feature can occur in acute presentation of Wilson’s disease?',options:['Coombs-positive hemolytic anemia','Coombs-negative acute hemolytic anemia','Polycythemia vera','Aplastic anemia'],answer:1},
+  {q:'Which age group most commonly presents with hepatic symptoms of Wilson’s disease?',options:['Children and adolescents','Elderly over 70 years','Infants under 6 months','Neonates'],answer:0},
+  {q:'Which psychiatric manifestation is associated with Wilson’s disease?',options:['Personality changes, depression, and psychosis','Obsessive compulsive disorder only','Visual hallucinations only','Alzheimer-type dementia'],answer:0},
+  {q:'Which region of the brain is most affected by copper deposition in Wilson’s disease?',options:['Cerebellum','Basal ganglia (lenticular nucleus)','Occipital lobe','Brainstem medulla'],answer:1},
+  {q:'Which characteristic sign may be seen on T2-weighted brain MRI in Wilson’s disease?',options:['Face of the giant panda sign','Hot cross bun sign','Tau sign','Empty sella sign'],answer:0},
+  {q:'How can Wilson’s disease manifest in the liver?',options:['Acute liver failure, chronic hepatitis, or cirrhosis','Isolated fatty liver only without progression','Hepatic hemangioma','Biliary atresia'],answer:0},
+  {q:'What is the primary treatment for patients with fulminant hepatic failure due to Wilson’s disease?',options:['High-dose penicillamine alone','Liver transplantation','Oral zinc monotherapy','Hemodialysis'],answer:1},
+  {q:'Which dietary advice should be given to patients with Wilson’s disease?',options:['Avoid copper-rich foods (shellfish, nuts, chocolate, liver)','Avoid high-protein foods','Strict sodium restriction only','Avoid milk products'],answer:0},
+  {q:'What is the pattern of inheritance for Wilson’s disease?',options:['Autosomal dominant','Autosomal recessive','X-linked dominant','Mitochondrial'],answer:1},
+  {q:'What is the normal primary route of excess copper elimination from the body?',options:['Urine','Biliary excretion into feces','Sweat','Exhalations'],answer:1},
+  {q:'How is non-ceruloplasmin-bound (free) serum copper level altered in Wilson’s disease?',options:['Decreased','Elevated','Zero','Unchanged'],answer:1},
+  {q:'Which screening strategy is recommended for first-degree relatives of a diagnosed patient?',options:['Screening with ceruloplasmin, urine copper, slit-lamp exam, and genetic testing','No screening needed unless symptomatic','Liver biopsy for all relatives immediately','Brain MRI for all relatives'],answer:0},
+  {q:'Is treatment for Wilson’s disease temporary or lifelong?',options:['1-month course','6-month course','Lifelong continuous maintenance therapy','Until symptoms resolve only'],answer:2}
+ ]
+};
+
+let activeModule='nt', currentQuiz=null, currentIndex=0, score=0, answered=false;
+function escapeHTML(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function setTheme(name){if(name==='burgundy')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',name);localStorage.setItem('app_color_theme',name);document.querySelectorAll('.theme-btn').forEach(b=>b.classList.toggle('active',b.getAttribute('onclick').includes(name)));}
+function toggleMode(){const dark=document.documentElement.getAttribute('data-mode')==='dark';if(dark){document.documentElement.removeAttribute('data-mode');document.getElementById('modeBtn').textContent='☀️ فاتح';localStorage.setItem('app_mode','light')}else{document.documentElement.setAttribute('data-mode','dark');document.getElementById('modeBtn').textContent='🌙 غامق';localStorage.setItem('app_mode','dark')}}
+setTheme(localStorage.getItem('app_color_theme')||'burgundy');if(localStorage.getItem('app_mode')==='dark'){document.documentElement.setAttribute('data-mode','dark');document.getElementById('modeBtn').textContent='🌙 غامق'}
+function renderNav(){const nav=document.getElementById('modulesNav');nav.innerHTML='';Object.keys(defaultModules).forEach(key=>{const m=defaultModules[key],b=document.createElement('button');b.className='module-tab '+(key===activeModule?'active':'');b.innerHTML=`${m.icon} ${escapeHTML(m.title)}`;b.onclick=()=>{activeModule=key;renderNav();renderModules()};nav.appendChild(b)})}
+function renderModules(){const root=document.getElementById('modulesContainer');root.innerHTML='';const mod=defaultModules[activeModule];const title=document.createElement('h2');title.className='section-title';title.textContent=mod.icon+' '+mod.title;root.appendChild(title);
+ mod.sections.forEach(sec=>{const sh=document.createElement('h3');sh.className='section-title';sh.textContent=sec.name;root.appendChild(sh);const grid=document.createElement('div');grid.className='subjects-grid';
+ sec.subjects.forEach(sub=>{const card=document.createElement('section');card.className='subject-card';const head=document.createElement('div');head.className='subject-header';head.innerHTML=`<div class="subject-title">${escapeHTML(sub.name)}</div><span>📚 ${sub.lectures.length} محاضرات</span>`;card.appendChild(head);const list=document.createElement('div');list.className='lectures-list';
+ sub.lectures.forEach((lec,i)=>{const key=`${sub.id}_${i}`,has=!!quizzes[key];const row=document.createElement('div');row.className='lecture-row';row.innerHTML=`<span class="lecture-name">${escapeHTML(lec)}</span><button class="btn lecture-open ${has?'':'secondary'}" ${has?'':'disabled'}>${has?'ابدأ الامتحان 📝':'الأسئلة قريباً'}</button>`;const btn=row.querySelector('button');if(has)btn.onclick=()=>startQuiz(key,lec);list.appendChild(row)});card.appendChild(list);grid.appendChild(card)});root.appendChild(grid)})
+}
+function startQuiz(key,title){currentQuiz={key,title,questions:quizzes[key]};currentIndex=0;score=0;answered=false;document.getElementById('libraryView').hidden=true;document.getElementById('quizView').hidden=false;renderQuestion();window.scrollTo({top:0,behavior:'smooth'})}
+function renderQuestion(){const host=document.getElementById('quizView'),q=currentQuiz.questions[currentIndex];answered=false;host.innerHTML=`<div class="quiz-card"><div class="quiz-top"><div class="quiz-title">${escapeHTML(currentQuiz.title)}</div><div class="quiz-meta">السؤال ${currentIndex+1} من ${currentQuiz.questions.length}</div></div><div class="quiz-progress"><div class="quiz-progress-fill" style="width:${currentIndex/currentQuiz.questions.length*100}%"></div></div><div class="question-text">${currentIndex+1}. ${escapeHTML(q.q)}</div><div class="options">${q.options.map((o,i)=>`<button class="option" data-option="${i}"><span class="option-symbol">${['A','B','C','D'][i]}.</span><span>${escapeHTML(o)}</span><span class="option-symbol" aria-hidden="true"></span></button>`).join('')}</div><div id="feedback" class="feedback" aria-live="polite"></div><div class="quiz-actions"><button class="btn secondary" onclick="backToLibrary()">رجوع للمحاضرات</button><button class="btn" id="nextBtn" disabled>${currentIndex===currentQuiz.questions.length-1?'عرض النتيجة':'السؤال التالي ←'}</button></div></div>`;
+ host.querySelectorAll('.option').forEach(b=>b.addEventListener('click',()=>chooseAnswer(Number(b.dataset.option))));document.getElementById('nextBtn').onclick=nextQuestion}
+function chooseAnswer(choice){if(answered)return;answered=true;const q=currentQuiz.questions[currentIndex];const buttons=document.querySelectorAll('.option');buttons.forEach((b,i)=>{b.disabled=true;const sym=b.querySelectorAll('.option-symbol')[1];if(i===q.answer){b.classList.add('correct');sym.textContent='✓'}if(i===choice&&i!==q.answer){b.classList.add('wrong');sym.textContent='✕'}});const fb=document.getElementById('feedback');if(choice===q.answer){score++;fb.className='feedback correct';fb.textContent='إجابة صحيحة! ✓'}else{fb.className='feedback wrong';fb.textContent='إجابة خاطئة ✕ — الإجابة الصحيحة: '+q.options[q.answer]}document.getElementById('nextBtn').disabled=false}
+function nextQuestion(){if(!answered)return;if(currentIndex<currentQuiz.questions.length-1){currentIndex++;renderQuestion();window.scrollTo({top:0,behavior:'smooth'})}else showResult()}
+function showResult(){const total=currentQuiz.questions.length,pct=Math.round(score/total*100);document.getElementById('quizView').innerHTML=`<div class="quiz-card"><div class="quiz-title" style="text-align:center">${escapeHTML(currentQuiz.title)}</div><div class="result-score">${score} / ${total}</div><div class="result-message">درجتك ${pct}% ${pct>=80?'ممتاز! 🌟':pct>=60?'جيد، استمر بالمراجعة 💪':'راجع المحاضرة وحاول مرة ثانية 📚'}</div><div class="quiz-actions" style="justify-content:center"><button class="btn secondary" onclick="startQuiz(currentQuiz.key,currentQuiz.title)">إعادة الامتحان 🔁</button><button class="btn" onclick="backToLibrary()">قائمة المحاضرات</button></div></div>`}
+function backToLibrary(){document.getElementById('quizView').hidden=true;document.getElementById('libraryView').hidden=false;currentQuiz=null;window.scrollTo({top:0,behavior:'smooth'})}
+renderNav();renderModules();
+</script>
+</body>
+</html>
