@@ -138,10 +138,10 @@ footer>a::before,footer>a::after,.site-rights a::before,.site-rights a::after{co
 const defaultModules = {
  nt:{title:'NT | Nutrition',icon:'🥗',sections:[
   {name:'📚 Community Medicine',subjects:[{id:'nt_comm',name:'Community Medicine',lectures:[
-   'Lec-1 Introduction to nutrition','Lec-2 Vitamins and mineral P1','Lec-3 Vitamins and mineral P2','Lec-4 Organic Nutrient','Lec-5 Energy balance'
+   'Lec-1 Introduction to nutrition','Lec-2 Vitamins and mineral P1','Lec-3 Vitamins and mineral P2','Lec-4 Organic Nutrient','Lec-5 Energy balance','Lec-6 TBL 1 Energy'
   ]}]},
   {name:'🧪 Biochemistry',subjects:[{id:'nt_biochem',name:'Biochemistry',lectures:[
-   'Lec-1 Dyslipidemia I','Lec-2 Dyslipidemia II','Lec-3 Dyslipidemia Biochemical cardiovascular risk markers','Lec-4 Vitamins','Lec-5 Water-Soluble Vitamins','Lec-6 Water soluble Vitamins P2'
+   'Lec-1 Dyslipidemia I','Lec-2 Dyslipidemia II','Lec-3 Vitamins','Lec-4 Water-Soluble Vitamins','Lec-5 Water soluble Vitamins P2'
   ]}]},
   {name:'🩺 Medicine',subjects:[{id:'nt_medicine',name:'Medicine',lectures:[
    'Lec-1 Hypovolemia and hypervolemia','Lec-2 Sodium Level Abnormalities','Lec-3 Obesity','Lec-4 Malnutrition and underweight','Lec-5 Wilson’s Disease'
@@ -296,6 +296,33 @@ const quizzes = {
   {q:'Which of the following is a benefit of physical activity?',options:['Increased risk of heart disease','Increased stress and anxiety','Improved sleep','Reduced bone strength'],answer:2},
   {q:'Which of the following is another benefit of regular physical activity?',options:['Increased risk of diabetes','Lowered risk of high blood pressure','Increased risk of certain cancers','Reduced independence in later life'],answer:1}
  ],
+ 'nt_comm_5': [
+  {q:'Which method is used to calculate the total energy content of food using macronutrients?',options:['BMI method','Atwater factors method','Mifflin method','Harris method'],answer:1},
+  {q:'What is the energy value of 1 gram of carbohydrate?',options:['4 kcal','7 kcal','9 kcal','2 kcal'],answer:0},
+  {q:'What is the energy value of 1 gram of fat?',options:['4 kcal','5 kcal','9 kcal','7 kcal'],answer:2},
+  {q:'What is the energy value of 1 gram of protein?',options:['9 kcal','7 kcal','2 kcal','4 kcal'],answer:3},
+  {q:'Which equation is used to calculate BMR in the female case in Task 2?',options:['Harris equation','Mifflin–St Jeor equation','Atwater equation','BMI equation'],answer:1},
+  {q:'What does BMR stand for?',options:['Basal Metabolic Rate','Body Mass Ratio','Basic Metabolic Requirement','Body Metabolic Reaction'],answer:0},
+  {q:'What does TEE stand for?',options:['Total Energy Examination','Total Exercise Energy','Total Energy Expenditure','Total Eating Evaluation'],answer:2},
+  {q:'Which formula is used to calculate BMI?',options:['Weight × Height','Height / Weight','Weight × Height²','Weight / Height²'],answer:3},
+  {q:'A female weighs 62 kg and has a height of 1.65 m. What is her approximate BMI?',options:['18.5','22.8','27.5','30.2'],answer:1},
+  {q:'What is the activity factor (AF) for the very active female in Task 2?',options:['1.2','1.55','1.7','1.3'],answer:2},
+  {q:'How is TEE generally estimated from BMR?',options:['BMR ÷ AF','BMR + AF','BMR − AF','BMR × AF'],answer:3},
+  {q:'Which of the following represents a positive energy balance?',options:['Energy intake is greater than energy expenditure','Energy intake equals energy expenditure','Energy intake is less than energy expenditure','No energy intake'],answer:0},
+  {q:'What does energy balance mean when calorie intake equals TEE?',options:['Weight gain','Weight loss','Weight maintenance','Malnutrition'],answer:2},
+  {q:'According to the classic teaching assumption, approximately how many kcal correspond to 0.5 kg of fat?',options:['1,500 kcal','3,500 kcal','5,000 kcal','7,000 kcal'],answer:1},
+  {q:'A person consumes fewer calories than their daily energy expenditure. What is the expected result?',options:['Weight gain','Weight maintenance','Positive energy balance','Weight loss'],answer:3},
+  {q:'What is the weight of the male student in Task 3?',options:['70 kg','80 kg','62 kg','75 kg'],answer:0},
+  {q:'What is the activity factor for the male student in Task 3?',options:['1.2','1.7','1.55','1.5'],answer:2},
+  {q:'Which equation is used to calculate BMR for males in the lecture?',options:['Atwater equation','Mifflin–St Jeor equation','BMI equation','Energy balance equation'],answer:1},
+  {q:'What is the height of the male medical resident in Task 4?',options:['165 cm','175 cm','180 cm','170 cm'],answer:3},
+  {q:'What is the activity factor for the medical resident in Task 4?',options:['1.5','1.7','1.2','1.55'],answer:0},
+  {q:'What does TER stand for?',options:['Total Exercise Requirement','Total Energy Requirement','Total Eating Rate','Total Energy Reaction'],answer:1},
+  {q:'Which of the following is important for maintaining body weight?',options:['Increasing calories continuously','Avoiding all fats','Matching energy intake with energy expenditure','Skipping meals'],answer:2},
+  {q:'A one-day food log is mainly used to:',options:['Calculate height','Determine age','Measure activity factor','Estimate daily energy intake'],answer:3},
+  {q:'Which of the following is an example of moderate physical activity mentioned in Task 3?',options:['Walking to classes and occasional gym workouts','Complete bed rest','Sleeping all day','No physical activity'],answer:0},
+  {q:'What is an appropriate dietary recommendation for someone who wants to maintain body weight?',options:['Consume unlimited calories','Skip breakfast','Balance calorie intake with daily energy needs','Eliminate carbohydrates completely'],answer:2}
+ ],
  'nt_biochem_0': [
   {q:'What are lipids?',options:['Water-soluble organic molecules','Water-insoluble organic molecules','Inorganic molecules','Proteins that transport oxygen'],answer:1},
   {q:'Which of the following is a major function of cholesterol?',options:['Transporting oxygen','Producing insulin','Acting as a precursor of steroid hormones','Breaking down proteins'],answer:2},
@@ -350,34 +377,7 @@ const quizzes = {
   {q:'According to the Friedewald formula, VLDL cholesterol is calculated as:',options:['Total cholesterol × 5','Total triglycerides ÷ 5','HDL cholesterol ÷ 5','LDL cholesterol × 5'],answer:1},
   {q:'The Friedewald formula for calculating LDL-C is valid when triglyceride levels are:',options:['Less than 150 mg/dL only','Less than 200 mg/dL only','Less than 400 mg/dL','Greater than 500 mg/dL'],answer:2}
  ],
- 'nt_biochem_2': [
-  {q:'What is the leading cause of morbidity and mortality worldwide?',options:['Respiratory diseases','Cardiovascular diseases','Kidney diseases','Infectious diseases'],answer:1},
-  {q:'Which of the following is a traditional risk factor for cardiovascular disease?',options:['Dyslipidemia','Good hydration','Normal blood pressure','Regular physical activity'],answer:0},
-  {q:'Which of the following is considered bad cholesterol?',options:['HDL cholesterol','LDL cholesterol','Albumin','Hemoglobin'],answer:1},
-  {q:'High LDL cholesterol increases the risk of which condition?',options:['Osteoporosis','Atherosclerosis','Anemia','Hypoglycemia'],answer:1},
-  {q:'What is atherosclerosis?',options:['A reduction in blood glucose','Plaque buildup in the arteries','A decrease in blood pressure','A reduction in body fat'],answer:1},
-  {q:'Which lipoprotein has a protective effect against cardiovascular disease?',options:['LDL','HDL','Lipoprotein(a)','VLDL'],answer:1},
-  {q:'What is the main function of HDL cholesterol?',options:['Increase plaque formation','Transport cholesterol away from the arteries','Increase blood glucose','Promote cholesterol accumulation in arteries'],answer:1},
-  {q:'Low HDL cholesterol is associated with:',options:['Reduced cardiovascular risk','Increased cardiovascular risk','Complete prevention of atherosclerosis','Reduced risk of stroke in all cases'],answer:1},
-  {q:'High triglyceride levels, particularly as part of which condition, are associated with increased cardiovascular risk?',options:['Metabolic syndrome','Osteoarthritis','Anemia','Hypothyroidism only'],answer:0},
-  {q:'Lipoprotein(a) is structurally similar to:',options:['HDL','LDL','Albumin','Hemoglobin'],answer:1},
-  {q:'Which additional protein is attached to lipoprotein(a)?',options:['Apolipoprotein(a)','Insulin','Albumin','Fibrinogen'],answer:0},
-  {q:'Why does lipoprotein(a) increase cardiovascular risk?',options:['It prevents all cholesterol transport','Its extra protein makes the particle more likely to stick to arteries','It removes all arterial plaques','It decreases total cholesterol to zero'],answer:1},
-  {q:'Which of the following is a cardiovascular disease risk factor?',options:['Family history','Smoking','Diabetes mellitus','All of the above'],answer:3},
-  {q:'Which of the following is a traditional risk factor for cardiovascular disease?',options:['Hypertension','Normal HDL cholesterol','Regular exercise','Healthy dietary habits'],answer:0},
-  {q:'Why is regular cholesterol screening important?',options:['To detect high cholesterol early','To increase LDL cholesterol','To eliminate the need for exercise','To prevent all diseases'],answer:0},
-  {q:'Which of the following is an appropriate lifestyle modification for managing cholesterol?',options:['Smoking more frequently','Avoiding all physical activity','Improving diet and exercising','Increasing unhealthy fat intake'],answer:2},
-  {q:'Which of the following may be used to manage high cholesterol and reduce cardiovascular risk?',options:['Appropriate cholesterol-lowering medications','Smoking','Physical inactivity','Excessive unhealthy food intake'],answer:0},
-  {q:'How is the atherogenic index (total cholesterol/HDL-C ratio) calculated?',options:['HDL-C ÷ total cholesterol','Total cholesterol ÷ HDL-C','LDL-C ÷ triglycerides','Total cholesterol × HDL-C'],answer:1},
-  {q:'A patient has a total cholesterol level of 200 mg/dL and an HDL-C level of 50 mg/dL. What is the atherogenic index?',options:['2','3','4','5'],answer:2,explanation:'Atherogenic index = total cholesterol ÷ HDL-C = 200 ÷ 50 = 4.'},
-  {q:'According to the lecture, a normal total cholesterol/HDL-C ratio is generally:',options:['Below 5:1','Above 10:1','Exactly 10:1','Above 15:1'],answer:0},
-  {q:'According to the lecture, a total cholesterol/HDL-C ratio of 3.5 or lower is considered:',options:['Very good','Very poor','Always abnormal','Diagnostic of diabetes'],answer:0},
-  {q:'A high atherogenic index generally indicates:',options:['Lower cardiovascular risk','Higher cardiovascular risk','Complete protection against atherosclerosis','No relationship to cardiovascular disease'],answer:1},
-  {q:'What is one clinical benefit of calculating the atherogenic index?',options:['It provides an integrated assessment of the lipid profile','It directly measures blood pressure','It measures blood glucose','It replaces every cardiovascular investigation'],answer:0},
-  {q:'A patient has total cholesterol of 220 mg/dL and HDL-C of 55 mg/dL. What is the atherogenic index?',options:['2','3','4','5'],answer:2,explanation:'Atherogenic index = 220 ÷ 55 = 4. According to the lecture, this is below 5:1 and generally within the normal range.'},
-  {q:'How can the atherogenic index help patients?',options:['It can improve risk communication and motivate lifestyle changes','It eliminates the need for cholesterol screening','It guarantees that cardiovascular disease will not develop','It increases LDL cholesterol to protective levels'],answer:0}
- ],
- 'nt_biochem_3': [
+  'nt_biochem_2': [
   {q:'Which of the following is a characteristic of fat-soluble vitamins?',options:['They are readily excreted in urine.','They cannot be stored in the body.','They can be stored in the liver and fatty tissues.','They are absorbed directly into the blood without lymph.'],answer:2},
   {q:'Which of the following is a fat-soluble vitamin?',options:['Vitamin B1','Vitamin C','Vitamin B12','Vitamin A'],answer:3},
   {q:'Which of the following is the storage form of vitamin A?',options:['Retinal','Retinol','Retinoic acid','Beta-carotene'],answer:1},
@@ -404,7 +404,7 @@ const quizzes = {
   {q:'What is the primary function of vitamin K?',options:['Calcium absorption from the intestine','Formation of visual pigments','Activation of blood coagulation factors','Antioxidant protection of cell membranes'],answer:2},
   {q:'Which coagulation factors require vitamin K for activation?',options:['Factors I, III, V and VIII','Factors II, VII, IX and X','Factors V, VIII, XI and XII','Factors I, V, VIII and XIII'],answer:1}
  ],
- 'nt_biochem_4': [
+ 'nt_biochem_3': [
   {q:'Which vitamin is known as thiamine?',options:['Vitamin B1','Vitamin B2','Vitamin B3','Vitamin B5'],answer:0},
   {q:'Which enzyme requires thiamine as a coenzyme to convert pyruvate to acetyl-CoA?',options:['Lactate dehydrogenase','Pyruvate dehydrogenase','Hexokinase','Succinate dehydrogenase'],answer:1},
   {q:'Thiamine is required for which reaction?',options:['Protein digestion','Oxidative decarboxylation','DNA replication only','Fat absorption'],answer:1},
@@ -431,7 +431,7 @@ const quizzes = {
   {q:'Vitamin B5 is also known as:',options:['Pantothenic acid','Folic acid','Biotin','Niacin'],answer:0},
   {q:'What is the primary function of coenzyme A, which contains vitamin B5?',options:['Carrying acyl groups in enzymatic reactions','Carrying oxygen in red blood cells','Producing antibodies directly','Storing calcium in bones'],answer:0}
  ],
- 'nt_biochem_5': [
+ 'nt_biochem_4': [
   {q:'What is the active form of vitamin B6?',options:['Thiamine pyrophosphate','Pyridoxal phosphate (PLP)','Tetrahydrofolate (THF)','Methylcobalamin'],answer:1},
   {q:'Vitamin B6 requirements are expressed in terms of dietary protein intake because PLP is mainly involved in:',options:['Fat absorption','Amino acid metabolism','Calcium absorption','Vitamin D synthesis'],answer:1},
   {q:'Pyridoxal phosphate (PLP) acts as a coenzyme for which enzymes?',options:['ALT and AST','Amylase and lipase','Pepsin and trypsin','Lactase and maltase'],answer:0},
